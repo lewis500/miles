@@ -44,7 +44,7 @@ var background = svg.append("rect")
     opacity: 0
   });
 
-x.domain([0,50]);
+x.domain([0,m]);
 y.domain([0,1200]);
 
 svg.append("g")
@@ -165,49 +165,169 @@ circle.on("mouseover", function(){
     }
 })
 
-var linesearch = false;
 
-circle.on("click", function(){
 
-  if(linesearch){
-    chart.diffGroup = svg.append("line")
-  }
+var divSlider = d3.select("body").append("div").attr("id","slider");
 
-  var selectedShape = d3.select(this);
+var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(m).min(1).step(.5).value(15);
 
-  var cx = parseFloat(selectedShape.attr("cx")),
-     cy = parseFloat(selectedShape.attr("cy")),
-     fill = selectedShape.attr("stroke");
+divSlider
+    .style({
+      width: width + "px",
+      "margin-left": margin.left + "px"
+    });
 
-  //line to x axis
-  chart.diffGroup = svg.append("line")
-     .attr("x1", cx)
-     .attr("y1", cy)
-     .attr("x2", cx)
-     .attr("y2", cy)
-     .style("fill", "none")
-     .style("stroke", "#444")
-     .style("stroke-width", 2)
-     // .style("stroke-dasharray", ("3, 3"))
+d3.select('#slider').call(sliderCall);
 
-  linesearch = true;
+var diffGroup = svg.append("g").attr("class","divGroup");
 
-});
+//line to y axis
+var diffLine = diffGroup.append("line")
+    .attr({
+        x1: x(15),
+        y1: y(10000/15),
+        x2: x(15+10),
+        y2: y(10000/(15+10))
+      })
+   .style("fill", "none")
+   .style("stroke", "#444")
+   .style("stroke-width", 2)
+   .style("stroke-dasharray", ("3, 3"));
 
-background.on("click", function(){
-  if(linesearch){
-     d3.selectAll(chart.diffGroup[0]).remove();
-    console.log('hello')
-  } 
-})
+var xLineA = diffGroup.append("line")
+    .attr({
+        x1: x(15),
+        y1: y(10000/15),
+        x2: x(15),
+        y2: y(0)
+      })
+   .style("fill", "none")
+   .style("stroke", "#444")
+   .style("stroke-width", 2)
+   .style("stroke-dasharray", ("3, 3"));
 
-background.on("mousemove", function(){
+var yLineA = diffGroup.append("line")
+    .attr({
+        x1: x(15),
+        y1: y(10000/15),
+        x2: x(0),
+        y2: y(10000/15)
+      })
+   .style("fill", "none")
+   .style("stroke", "#444")
+   .style("stroke-width", 2)
+   .style("stroke-dasharray", ("3, 3"));
 
-  if(linesearch){
-    var m = d3.mouse(this);
-      d3.selectAll(chart.diffGroup[0])
-        .attr("x2", m[0])
-        .attr("y2", m[1])
-  }
+var xLineB = diffGroup.append("line")
+    .attr({
+        x1: x(25),
+        y1: y(10000/25),
+        x2: x(25),
+        y2: y(0)
+      })
+   .style("fill", "none")
+   .style("stroke", "#444")
+   .style("stroke-width", 2)
+   .style("stroke-dasharray", ("3, 3"));
 
-})
+var yLineB = diffGroup.append("line")
+    .attr({
+        x1: x(25),
+        y1: y(10000/25),
+        x2: x(0),
+        y2: y(10000/25)
+      })
+   .style("fill", "none")
+   .style("stroke", "#444")
+   .style("stroke-width", 2)
+   .style("stroke-dasharray", ("3, 3"));
+
+function slide(event, val){
+
+  diffLine.attr({
+    x1: x(val),
+    y1: y(10000/val),
+    x2: x(val+10),
+    y2: y(10000/(val+10))
+  });
+
+  xLineA.attr({
+    x1: x(val),
+    y1: y(10000/val),
+    x2: x(val),
+    y2: y(0)
+  });
+
+  yLineA.attr({
+    x1: x(val),
+    y1: y(10000/(val)),
+    x2: x(0),
+    y2: y(10000/(val))
+  });
+
+  xLineB.attr({
+    x1: x(val+10),
+    y1: y(10000/(val+10)),
+    x2: x(val+10),
+    y2: y(0)
+  });
+
+  yLineB.attr({
+    x1: x(val+10),
+    y1: y(10000/(val+10)),
+    x2: x(0),
+    y2: y(10000/(val+10))
+  });
+
+
+}
+
+
+
+
+// var linesearch = false;
+
+// circle.on("click", function(){
+
+//   if(linesearch){
+//     chart.diffGroup = svg.append("line")
+//   }
+
+//   var selectedShape = d3.select(this);
+
+//   var cx = parseFloat(selectedShape.attr("cx")),
+//      cy = parseFloat(selectedShape.attr("cy")),
+//      fill = selectedShape.attr("stroke");
+
+//   //line to x axis
+//   chart.diffGroup = svg.append("line")
+//      .attr("x1", cx)
+//      .attr("y1", cy)
+//      .attr("x2", cx)
+//      .attr("y2", cy)
+//      .style("fill", "none")
+//      .style("stroke", "#444")
+//      .style("stroke-width", 2)
+//      // .style("stroke-dasharray", ("3, 3"))
+
+//   linesearch = true;
+
+// });
+
+// background.on("click", function(){
+//   if(linesearch){
+//      d3.selectAll(chart.diffGroup[0]).remove();
+//     console.log('hello')
+//   } 
+// })
+
+// background.on("mousemove", function(){
+
+//   if(linesearch){
+//     var m = d3.mouse(this);
+//       d3.selectAll(chart.diffGroup[0])
+//         .attr("x2", m[0])
+//         .attr("y2", m[1])
+//   }
+
+// })

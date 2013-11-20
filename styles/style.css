@@ -1,42 +1,48 @@
-    body {
-      font-family: 'Open Sans', sans-serif;
-      padding: 40px;
-          }
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 40px;
+      }
 
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #000;
-      shape-rendering: crispEdges;
-    }
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
 
-  .d3-slider-handle{
-    border: 1px solid #737373;
-    border-radius: 4px;
-    background: #eee;
-    background: linear-gradient(to bottom, #BBBBBB 0%, #565656 100%);
+.d3-slider-handle{
+  border: 1px solid #737373;
+  border-radius: 4px;
+  background: #eee;
+  background: linear-gradient(to bottom, #BBBBBB 0%, #565656 100%);
+}
 
-  }
+.line {
+  fill: none;
+  stroke: #e74c3c;
+  stroke-width: 2px;
+}
 
-    .line {
-      fill: none;
-      stroke: #e74c3c;
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  padding: 15px;             
+  background: #666;   
+  border: 0px;    
+  color: white;
+  font-family: "Open Sans";  
+  border-radius: 6px;           
+  pointer-events: none;   
+  font-size: 14px;      
+}
 
-      stroke-width: 2px;
-    }
+.front {
+  fill: #E33131;
+}
 
-    div.tooltip {   
-      position: absolute;           
-      text-align: center;           
-      padding: 15px;             
-      background: #666;   
-      border: 0px;    
-      color: white;
-      font-family: "Open Sans";  
-      border-radius: 6px;           
-      pointer-events: none;   
-      font-size: 14px;      
-    }
+.back.bar{
+  fill: #696969;
+}
 
 /*.dot{
   cursor: pointer;
