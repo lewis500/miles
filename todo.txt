@@ -1,2 +1,8 @@
-SHORT TERM
+LINE CHART
+add tooltip on mouseover
+fix how it won't undo the clickableness
+write text
+add a slider
+be able to drag a line along the curve
 
+BAR CHARTS

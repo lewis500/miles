@@ -1,0 +1,1013 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wish",
+				"wishAssigner"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"To",
+				"Toll"
+			],
+			[
+				"Toll",
+				"TollIg"
+			],
+			[
+				"time",
+				"timeRange"
+			],
+			[
+				"ran",
+				"timeRange"
+			],
+			[
+				"lClass",
+				"lClassA"
+			],
+			[
+				"loop",
+				"loopNumber"
+			],
+			[
+				"pros",
+				"prospC"
+			],
+			[
+				"assig",
+				"assignToTimes"
+			],
+			[
+				"C",
+				"C"
+			],
+			[
+				"color",
+				"colorScale"
+			],
+			[
+				"JSON",
+				"JSON2CSV"
+			],
+			[
+				"RE",
+				"fs.readFileSync"
+			],
+			[
+				"sf",
+				"sfpark"
+			],
+			[
+				"con",
+				"con	console"
+			],
+			[
+				"locs",
+				"locs_with_keys"
+			],
+			[
+				"cc",
+				"cCallback"
+			],
+			[
+				"$roo",
+				"$rootScope"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/chart.js",
+			"settings":
+			{
+				"buffer_size": 4940,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"enume",
+				"Snippet: Enumerate"
+			],
+			[
+				"tex",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"bibte",
+				"Set Syntax: BibTeX"
+			],
+			[
+				"bibtex",
+				"Set Syntax: BibTeX"
+			],
+			[
+				"node",
+				"SublimeREPL: Node"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"browsep",
+				"Preferences: Browse Packages"
+			],
+			[
+				"prett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"Package Control: li",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/lewis/Documents/github/miles/styles/style.css",
+		"/home/lewis/Documents/github/miles/scripts/dimple.js",
+		"/home/lewis/Documents/github/miles/scripts/chart.js",
+		"/home/lewis/Documents/github/miles/todo.txt",
+		"/home/lewis/Documents/github/miles/text.txt",
+		"/home/lewis/Documents/github/danchart/styles/style.css",
+		"/home/lewis/Documents/github/danchart/index.html",
+		"/home/lewis/Documents/github/danchart/scripts/chart.js",
+		"/home/lewis/Documents/github/bottleneck/shorter.tex",
+		"/home/lewis/Documents/github/bottleneck/todo.txt",
+		"/home/lewis/Documents/github/bottleneck/main.tex",
+		"/home/lewis/Documents/github/bottleneck/simulation/scripts/load.js",
+		"/home/lewis/Documents/github/bottleneck/simulation/load.html",
+		"/home/lewis/Downloads/Equilibrium.m",
+		"/home/lewis/Documents/github/bottleneck/agent.txt",
+		"/home/lewis/Documents/github/bottleneck/agent-based.txt",
+		"/home/lewis/Documents/github/bottleneck/simulation/sim.html",
+		"/home/lewis/Documents/github/bottleneck/simulation/scripts/sim.js",
+		"/home/lewis/Documents/github/bottleneck/bib.txt",
+		"/home/lewis/Documents/github/bottleneck/start.tex",
+		"/home/lewis/Documents/github/bottleneck/short.tex",
+		"/home/lewis/Documents/github/bottleneck/simulation/index.html",
+		"/home/lewis/Documents/github/bottleneck/simulation/scripts/vickrey.js",
+		"/home/lewis/Documents/github/bottleneck/python/vickrey.ipynb",
+		"/home/lewis/Documents/github/bottleneck/.gitignore~",
+		"/home/lewis/Documents/github/bottleneck/oop.js",
+		"/home/lewis/Documents/github/bottleneck/point.tex",
+		"/home/lewis/Documents/github/bottleneck/images/after.svg",
+		"/home/lewis/Documents/github/bottleneck/bottleneck.sublime-project",
+		"/home/lewis/.config/sublime-text-3/Packages/LaTeXTools/LaTeX.sublime-commands",
+		"/home/lewis/.config/sublime-text-3/Packages/LaTeXTools/README.markdown",
+		"/home/lewis/.config/sublime-text-3/Packages/LaTeXTools/LaTeXTools Preferences.sublime-settings",
+		"/home/lewis/.config/sublime-text-3/Packages/User/LaTeXTools Preferences.sublime-settings",
+		"/home/lewis/Documents/github/bottleneck/drawing-1.tex",
+		"/home/lewis/Documents/github/bottleneck/.gitignore",
+		"/home/lewis/Documents/github/DashDispatch/app/todo.txt",
+		"/home/lewis/Documents/github/DashDispatch/test/spec/controllers/loginController.js",
+		"/home/lewis/Documents/github/DashDispatch/test/spec/directives/microView.js",
+		"/home/lewis/Documents/github/DashDispatch/app/public/views/main.html",
+		"/home/lewis/Dropbox/Writing/outsourcing.txt",
+		"/home/lewis/Documents/github/vudlab-website/bart/index.html",
+		"/home/lewis/Documents/github/DashDispatch/app/public/scripts/services/cfg.js",
+		"/home/lewis/Documents/github/DashDispatch/app/public/scripts/controllers/mainController.js",
+		"/home/lewis/Documents/github/DashDispatch/app/public/scripts/app.js",
+		"/home/lewis/Documents/github/bart-ridership/index.html",
+		"/home/lewis/Documents/github/bart-ridership/style/style.css",
+		"/home/lewis/Documents/github/vudlab-website/bart/style/style.css",
+		"/home/lewis/Documents/github/bart-ridership/scripts/chord.js",
+		"/home/lewis/Documents/github/bart-ridership/todo.txt",
+		"/home/lewis/Documents/github/bart-ridership/data/bart_stations.json",
+		"/home/lewis/Documents/github/bart-ridership/data/chord_entries.json",
+		"/home/lewis/Documents/github/bart-ridership/style/Flat-UI-master/js/jquery-2.0.3.min.js",
+		"/home/lewis/Documents/github/bart-ridership/scripts/node_modules/togeojson/node_modules/jsdom/node_modules/cssstyle/lib/properties/webkitPerspective.js",
+		"/home/lewis/Documents/github/bart-ridership/scripts/asdf.json",
+		"/home/lewis/Documents/github/bart-ridership/data/chord_exits.json",
+		"/home/lewis/Documents/github/bart-ridership/data/lasers.topojson",
+		"/home/lewis/Documents/github/bart-ridership/data/lasers.json",
+		"/home/lewis/Documents/github/bart-ridership/index_old.html",
+		"/home/lewis/Documents/github/bart-ridership/scripts/parser.js",
+		"/home/lewis/Documents/github/bart-ridership/data/locs_exits.json",
+		"/home/lewis/Documents/github/bart-ridership/data/ridership_exits.json",
+		"/home/lewis/Documents/github/bart-ridership/data/ridership_entries.json",
+		"/home/lewis/Documents/github/bart-ridership/data/locs.json",
+		"/home/lewis/Documents/github/bart-ridership/data/ridership.csv",
+		"/home/lewis/Documents/github/bart-ridership/data/chord_ridership.json",
+		"/home/lewis/Downloads/bart.kml",
+		"/home/lewis/Documents/github/bart-ridership/data/routes.geojson",
+		"/home/lewis/Documents/github/bart-ridership/data/bart_stations.csv",
+		"/home/lewis/Documents/github/bart-ridership/data/chordStations.json",
+		"/home/lewis/Documents/github/bart-ridership/converter.js",
+		"/home/lewis/Documents/github/bart-ridership/data/bart_station_key.csv",
+		"/home/lewis/Documents/github/bart/index.html",
+		"/home/lewis/Documents/github/Via-Website/index.html",
+		"/home/lewis/Documents/github/Via-Website/views/teamMate.html",
+		"/home/lewis/Documents/github/Via-Website/scripts/mainController.js",
+		"/home/lewis/Documents/github/Via-Website/scripts/teamMate.js",
+		"/home/lewis/Documents/github/Via-Website/scripts/advisor.js",
+		"/home/lewis/Documents/github/Via-Website/views/advisor.html",
+		"/home/lewis/Documents/github/Via-Website/views/who.html",
+		"/home/lewis/Documents/github/Via-Website/views/what.html",
+		"/home/lewis/Documents/github/bart/style/style.css",
+		"/home/lewis/Documents/github/bart/index2.html",
+		"/home/lewis/Documents/github/bart/scripts/app.js",
+		"/home/lewis/Documents/github/bart/data/chordStations.json",
+		"/home/lewis/Documents/github/bart/scripts/chord.js",
+		"/home/lewis/Documents/github/bart/data/hisridership.json",
+		"/home/lewis/Documents/github/bart/data/chord_ridership.json",
+		"/home/lewis/Documents/github/bart/scripts/parser.js",
+		"/home/lewis/Documents/github/parking_data/scripts/parseit2.js",
+		"/home/lewis/Documents/github/parking_data/data/delivery/README.txt",
+		"/home/lewis/Documents/github/parking_data/scripts/402827.csv",
+		"/home/lewis/Documents/github/parking_data/data/delivery/detector_locs_with_names.json",
+		"/home/lewis/Documents/github/parking_data/data/pems_station_locs_new.json",
+		"/home/lewis/Documents/github/parking_data/todo.txt",
+		"/home/lewis/Documents/github/parking_data/scripts/querymaker2.js",
+		"/home/lewis/Documents/github/parking_data/scripts/querymaker3.js",
+		"/home/lewis/Documents/github/parking_data/scripts/404418.csv",
+		"/home/lewis/Documents/github/parking_data/scripts/parseit.js",
+		"/home/lewis/Documents/github/parking_data/data/newWay_d.csv",
+		"/home/lewis/Documents/github/parking_data/data/newWay.csv",
+		"/home/lewis/Documents/github/parking_data/data/locs_with_names.json",
+		"/home/lewis/Documents/github/parking_data/data/locs_with_ids.json",
+		"/home/lewis/Documents/github/parking_data/scripts/json2csv.js",
+		"/home/lewis/Documents/github/parking_data/scripts/d3.js",
+		"/home/lewis/Documents/github/parking_data/data/d_occs.csv",
+		"/home/lewis/Documents/github/querymaker/querymaker2.js",
+		"/home/lewis/Documents/github/parking_data/data/test_parsed.csv",
+		"/home/lewis/Documents/github/parking_data/scripts/node_modules/d3/node_modules/jsdom/node_modules/cssstyle/lib/properties/pageBreakInside.js",
+		"/home/lewis/Documents/github/bart/todo.txt",
+		"/home/lewis/Documents/github/bart/data/bart_stations.csv",
+		"/home/lewis/Documents/github/bart/data/bart_stations.json",
+		"/home/lewis/Documents/github/bart/data/bart_station_key.csv",
+		"/home/lewis/Documents/github/bart/data/ridership.json",
+		"/home/lewis/Documents/github/bart/data/ridership.csv",
+		"/home/lewis/Documents/github/bart/data/bart.xml",
+		"/home/lewis/Documents/github/bart/bayareaTOPO.json",
+		"/home/lewis/Documents/github/sfpark/scripts/parseit.js",
+		"/home/lewis/Documents/github/sfpark/data/locs.json",
+		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser_csv2.js",
+		"/home/lewis/Documents/github/sfpark/data/example_request.json",
+		"/home/lewis/Documents/github/sfpark/scripts/location.parser.js",
+		"/home/lewis/Documents/github/sfpark/data/locs_with_keys.json",
+		"/home/lewis/Documents/github/sfpark/scraper/indextest.js",
+		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser.js",
+		"/home/lewis/Documents/github/sfpark/data/locs_with_keys_names.json",
+		"/home/lewis/Documents/github/sfpark/scripts/testanswer.csv",
+		"/home/lewis/Documents/github/sfpark/scripts/occ.delta.js",
+		"/home/lewis/Dropbox/Writing/natreview4.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cx",
+			"rangeGroup",
+			"of",
+			"10px",
+			"chart.svg",
+			"tooltipGroup",
+			"eee",
+			"Expenses",
+			"cost",
+			"description",
+			"expense",
+			"tooltip",
+			"event",
+			"70",
+			"val",
+			"expense",
+			"class",
+			"z",
+			"weighting",
+			"total cost",
+			"figure",
+			"load-pri",
+			"obtain",
+			"period",
+			"begin",
+			"min",
+			"r(u)",
+			" }",
+			"min",
+			"for",
+			"\\text",
+			"pricing",
+			"\\bar{l}",
+			"horizonta",
+			"driver",
+			"with",
+			"gamma",
+			"\\bar{q}",
+			"q_j",
+			"q_i",
+			"gamma",
+			"400",
+			"agentArray",
+			"agArray",
+			"300",
+			"and",
+			"desired ",
+			"cumLess",
+			"tollOn",
+			"evalcost",
+			"tollHim",
+			"tollhim",
+			"math.random",
+			"prices",
+			"this.choose",
+			"tollhim",
+			"tollOn",
+			"tollon",
+			"tc =",
+			"prices",
+			"return",
+			"getends",
+			"this",
+			"classes",
+			"redraw",
+			"ig",
+			"timeLength",
+			"tolls",
+			"new Toll",
+			"tollchart",
+			"Toll",
+			"price",
+			"priceSched",
+			"priceSchedprice",
+			"priceSched",
+			"tollchart",
+			"tc =",
+			"ddp",
+			"choose",
+			"label",
+			"this.choose",
+			"choice",
+			"index",
+			"choose",
+			"range(",
+			"400",
+			"totalcost",
+			"height =",
+			"1600",
+			"400",
+			"1200",
+			"800",
+			"350",
+			"00",
+			"1600",
+			"300",
+			"lightgreen",
+			"rose",
+			"coral",
+			"wishtimes",
+			"newtimes",
+			"totimes",
+			"danger",
+			"Pause",
+			"');\n",
+			"warning",
+			"danger",
+			"transit",
+			"totalCost",
+			"TollChart",
+			"tChart",
+			"tc",
+			"tChart",
+			"mc",
+			"cc",
+			"asdf",
+			"tollChart",
+			"CHART",
+			"flick",
+			"asdf",
+			"tooltip",
+			"this.redraw",
+			"asdf.redraw",
+			"switch",
+			"toll",
+			"tolls",
+			"pax",
+			"Delayed Classes"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"expense",
+			"cost",
+			"l",
+			"\\pi(u)",
+			"l(u)",
+			"traveler",
+			"\\bar{l}",
+			"l_j",
+			"l_i",
+			"rushLength",
+			"mChart",
+			"cChart",
+			"tChart",
+			"TollChart",
+			"toggleTolls",
+			"trav",
+			"price",
+			"redrawCumChart",
+			"evalCost",
+			"v.",
+			"putAgentsToTimes",
+			"prosp",
+			"process",
+			"interval.",
+			"interval",
+			"q",
+			"Strong POP Scheme",
+			"Weak POP Scheme",
+			"Traditional Scheme",
+			"Traditional scheme",
+			"\\sum",
+			"\">\n",
+			"locs",
+			"exits",
+			"",
+			"}",
+			"{",
+			".name",
+			"rScale",
+			"water"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/lewis/Documents/github/miles"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "scripts/chart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4134,
+								4134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2805.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"todo",
+				"todo.txt"
+			],
+			[
+				"style.",
+				"styles/style.css"
+			],
+			[
+				"chart.js",
+				"scripts/chart.js"
+			],
+			[
+				"shorter",
+				"shorter.tex"
+			],
+			[
+				"newst.tex",
+				"newest.tex"
+			],
+			[
+				"shroter.",
+				"shorter.tex"
+			],
+			[
+				"shorter.te",
+				"shorter.tex"
+			],
+			[
+				"shorter.",
+				"shorter.tex"
+			],
+			[
+				"sim.js",
+				"simulation/scripts/load.js"
+			],
+			[
+				"shorte.",
+				"shorter.tex"
+			],
+			[
+				"load.js",
+				"simulation/scripts/load.js"
+			],
+			[
+				"load.html",
+				"simulation/load.html"
+			],
+			[
+				"agen",
+				"agent.txt"
+			],
+			[
+				"load.h",
+				"simulation/load.html"
+			],
+			[
+				"load",
+				"simulation/load.html"
+			],
+			[
+				"agent",
+				"agent.txt"
+			],
+			[
+				"agent-",
+				"agent-based.txt"
+			],
+			[
+				"vickrey",
+				"simulation/scripts/vickrey.js"
+			],
+			[
+				"index.html",
+				"simulation/index.html"
+			],
+			[
+				"sim",
+				"simulation/scripts/sim.js"
+			],
+			[
+				"index",
+				"simulation/index.html"
+			],
+			[
+				"vick",
+				"simulation/scripts/vickrey.js"
+			],
+			[
+				"short",
+				"short.tex"
+			],
+			[
+				"",
+				"point.tex"
+			],
+			[
+				"main",
+				"main.tex"
+			],
+			[
+				"sublime",
+				"research.sublime-project"
+			],
+			[
+				"pricing",
+				"pricing.tex"
+			],
+			[
+				"header",
+				"app/public/views/header.html"
+			],
+			[
+				"userser",
+				"app/public/scripts/services/UserService.js"
+			],
+			[
+				"login",
+				"app/public/scripts/controllers/loginController.js"
+			],
+			[
+				"maincontr",
+				"app/public/scripts/controllers/mainController.js"
+			],
+			[
+				"microview",
+				"app/public/scripts/directives/microView.js"
+			],
+			[
+				"microvi",
+				"test/spec/directives/microView.js"
+			],
+			[
+				"app.js",
+				"app/public/scripts/app.js"
+			],
+			[
+				"cfg.js",
+				"app/public/scripts/services/cfg.js"
+			],
+			[
+				"main.html",
+				"app/public/views/main.html"
+			],
+			[
+				"style.css",
+				"style/style.css"
+			],
+			[
+				"chord.js",
+				"scripts/chord.js"
+			],
+			[
+				"tooltip",
+				"scripts/node_modules/togeojson/node_modules/jsdom/node_modules/cssstyle/lib/properties/webkitPerspective.js"
+			],
+			[
+				"style",
+				"style/style.css"
+			],
+			[
+				"todo.txt",
+				"todo.txt"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"chord",
+				"scripts/chord.js"
+			],
+			[
+				"styles.css",
+				"style/style.css"
+			],
+			[
+				"lase",
+				"data/lasers.json"
+			],
+			[
+				"what",
+				"views/what.html"
+			],
+			[
+				"who.",
+				"views/who.html"
+			],
+			[
+				"teammate",
+				"views/teamMate.html"
+			],
+			[
+				"advisor.html",
+				"views/advisor.html"
+			],
+			[
+				"cfg.j",
+				"app/public/scripts/services/cfg.js"
+			],
+			[
+				"cfg",
+				"app/public/scripts/services/cfg.js"
+			],
+			[
+				"index2",
+				"index2.html"
+			],
+			[
+				"d3.js",
+				"scripts/d3.js"
+			],
+			[
+				"lewis_",
+				"scripts/lewis_parser_new2.js"
+			],
+			[
+				"nat",
+				"natreview4.txt"
+			],
+			[
+				"lewis",
+				"scripts/lewis_parser_new.js"
+			],
+			[
+				"querym",
+				"querymaker.js"
+			],
+			[
+				"usrser",
+				"app/public/scripts/services/UserService.js"
+			],
+			[
+				"settings.js",
+				"app/public/scripts/services/settings.js"
+			],
+			[
+				"usrservice",
+				"app/public/scripts/services/UserService.js"
+			],
+			[
+				"usrs",
+				"test/spec/services/UserService.js"
+			],
+			[
+				"app.",
+				"app/public/scripts/app.js"
+			],
+			[
+				"us",
+				"app/public/scripts/services/UserService.js"
+			],
+			[
+				"settings",
+				"app/public/scripts/controllers/settingsController.js"
+			],
+			[
+				"settings.html",
+				"app/public/views/settings.html"
+			],
+			[
+				"userse",
+				"app/public/scripts/services/UserService.js"
+			],
+			[
+				"logincon",
+				"app/public/scripts/controllers/loginController.js"
+			],
+			[
+				"sizer",
+				"app/public/scripts/directives/sizer.js"
+			],
+			[
+				"bootstrap",
+				"app/public/flatui/bootstrap/css/bootstrap.css"
+			],
+			[
+				"main.ht",
+				"app/public/views/main.html"
+			],
+			[
+				"maincon",
+				"app/public/scripts/controllers/mainController.js"
+			],
+			[
+				"micorview",
+				"app/public/scripts/directives/microView.js"
+			],
+			[
+				"resizer",
+				"app/public/scripts/directives/resizer.js"
+			],
+			[
+				"note16",
+				"note16.tex"
+			],
+			[
+				"microv",
+				"app/public/scripts/directives/microView.js"
+			],
+			[
+				"users",
+				"app/public/scripts/services/UserService.js"
+			],
+			[
+				"main.",
+				"app/public/views/main.html"
+			],
+			[
+				"flat",
+				"app/public/flatui/css/flat-ui.css"
+			],
+			[
+				"settingscontr",
+				"app/public/scripts/controllers/settingsController.js"
+			],
+			[
+				"main.css",
+				"app/public/styles/main.css"
+			],
+			[
+				"index.js",
+				"node_modules/connect-livereload/index.js"
+			],
+			[
+				"index.jade",
+				"index.jade"
+			],
+			[
+				"juju.css",
+				"new/bootstrap/css/juju.css"
+			],
+			[
+				"bottom",
+				"simpsons/views/bottom.html"
+			],
+			[
+				"idnex.h",
+				"index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/github/bottleneck/bottleneck.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
