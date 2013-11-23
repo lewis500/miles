@@ -1,8 +1,19 @@
 LINE CHART
 add tooltip on mouseover
-fix how it won't undo the clickableness
+add circles where lines intersect
 write text
-add a slider
-be able to drag a line along the curve
+change label to "gallons used"
+change everything over to 13k / year
+make the squares resize
+move the formatting to style.css
 
 BAR CHARTS
+make the bar chart into a reusable chart to make the second one
+fix what ever is wrong with the labels
+add a display of savings
+
+
+
+
+BOTH
+color scheme

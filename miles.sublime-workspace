@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"max",
+				"maxMpg"
+			],
+			[
 				"wish",
 				"wishAssigner"
 			],
@@ -84,18 +88,42 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "barchart.html",
 			"settings":
 			{
-				"buffer_size": 1032,
+				"buffer_size": 1035,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "scripts/chart.js",
+			"file": "scripts/barchart.js",
 			"settings":
 			{
-				"buffer_size": 4940,
+				"buffer_size": 2371,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "linechart.html",
+			"settings":
+			{
+				"buffer_size": 1068,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/linechart.js",
+			"settings":
+			{
+				"buffer_size": 7352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "todo.txt",
+			"settings":
+			{
+				"buffer_size": 430,
 				"line_ending": "Unix"
 			}
 		}
@@ -103,9 +131,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 348.0,
 		"selected_items":
 		[
+			[
+				"color",
+				"Color picker"
+			],
 			[
 				"enume",
 				"Snippet: Enumerate"
@@ -187,10 +219,14 @@
 	},
 	"file_history":
 	[
+		"/home/lewis/Documents/github/miles/scripts/linechart.js",
+		"/home/lewis/Documents/github/miles/todo.txt",
 		"/home/lewis/Documents/github/miles/styles/style.css",
+		"/home/lewis/Documents/github/miles/barchart.html",
+		"/home/lewis/Documents/github/miles/scripts/barchart.js",
+		"/home/lewis/Documents/github/miles/index.html",
 		"/home/lewis/Documents/github/miles/scripts/dimple.js",
 		"/home/lewis/Documents/github/miles/scripts/chart.js",
-		"/home/lewis/Documents/github/miles/todo.txt",
 		"/home/lewis/Documents/github/miles/text.txt",
 		"/home/lewis/Documents/github/danchart/styles/style.css",
 		"/home/lewis/Documents/github/danchart/index.html",
@@ -310,11 +346,7 @@
 		"/home/lewis/Documents/github/sfpark/scripts/location.parser.js",
 		"/home/lewis/Documents/github/sfpark/data/locs_with_keys.json",
 		"/home/lewis/Documents/github/sfpark/scraper/indextest.js",
-		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser.js",
-		"/home/lewis/Documents/github/sfpark/data/locs_with_keys_names.json",
-		"/home/lewis/Documents/github/sfpark/scripts/testanswer.csv",
-		"/home/lewis/Documents/github/sfpark/scripts/occ.delta.js",
-		"/home/lewis/Dropbox/Writing/natreview4.txt"
+		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser.js"
 	],
 	"find":
 	{
@@ -332,6 +364,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cy",
+			"cx",
+			"cy",
+			".axis",
+			"max",
+			"min",
+			"xdMpg",
+			"2100",
+			"2000",
+			"width",
+			"mpg",
 			"cx",
 			"rangeGroup",
 			"of",
@@ -448,18 +491,7 @@
 			"mc",
 			"cc",
 			"asdf",
-			"tollChart",
-			"CHART",
-			"flick",
-			"asdf",
-			"tooltip",
-			"this.redraw",
-			"asdf.redraw",
-			"switch",
-			"toll",
-			"tolls",
-			"pax",
-			"Delayed Classes"
+			"tollChart"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -524,24 +556,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "barchart.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1032,
+						"buffer_size": 1035,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								493,
-								493
+								492,
+								492
 							]
 						],
 						"settings":
@@ -558,40 +590,132 @@
 				},
 				{
 					"buffer": 1,
-					"file": "scripts/chart.js",
+					"file": "scripts/barchart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4940,
+						"buffer_size": 2371,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4134,
-								4134
+								2371,
+								2371
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?"
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2805.0,
+						"translation.y": 812.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "linechart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scripts/linechart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5643,
+								5643
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3455.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "todo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				}
 			]
+		},
+		{
+			"sheets":
+			[
+			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -606,11 +730,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -627,7 +758,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 64.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -638,6 +769,26 @@
 			[
 				"todo",
 				"todo.txt"
+			],
+			[
+				"linechart.js",
+				"scripts/linechart.js"
+			],
+			[
+				"linech",
+				"linechart.html"
+			],
+			[
+				"bar",
+				"scripts/barchart.js"
+			],
+			[
+				"barch",
+				"scripts/barchart.js"
+			],
+			[
+				"style.css",
+				"styles/style.css"
 			],
 			[
 				"style.",
@@ -778,10 +929,6 @@
 			[
 				"main.html",
 				"app/public/views/main.html"
-			],
-			[
-				"style.css",
-				"style/style.css"
 			],
 			[
 				"chord.js",
@@ -1005,7 +1152,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 258.0,
+	"side_bar_width": 97.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

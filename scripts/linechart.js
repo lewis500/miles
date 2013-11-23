@@ -1,13 +1,13 @@
 var m = 55;
 
-var data = d3.range(1,m).map(function(d,i){
+var data = d3.range(8,m).map(function(d,i){
   return {
     y: 10000/d,
     x: d
   }
 });
 
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
+var margin = {top: 47.5, right: 45, bottom: 70, left: 90},
     width = 620 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -16,15 +16,18 @@ var x = d3.scale.linear()
     // .clamp(true);
 
 var y = d3.scale.linear()
-    .range([height, 0]);
+    .range([height, 0])
+    // .clamp(true);
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom");
+    .orient("bottom")
+    .ticks(5);
 
 var yAxis = d3.svg.axis()
     .scale(y)
-    .orient("left");
+    .orient("left")
+    .ticks(5);
 
 var line = d3.svg.line()
     .x(function(d) { return x(d.x); })
@@ -53,10 +56,10 @@ svg.append("g")
     .call(xAxis)
 .append("text")
   // .attr("transform", "rotate(-90)")
-  .attr("x", width - 10)
-  .attr("dy", "-.35em")
+  .attr("x", width - 5)
+  .attr("dy", "3em")
   .style("text-anchor", "end")
-  .text("miles per gallon");
+  .text("miles/gallon");
 
 svg.append("g")
     .attr("class", "y axis")
@@ -64,9 +67,9 @@ svg.append("g")
   .append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 6)
-    .attr("dy", ".71em")
+    .attr("dy", "-5em")
     .style("text-anchor", "end")
-    .text("gallons per 10,000 miles");
+    .text("gallons consumed");
 
 
 svg.append("path")
@@ -74,9 +77,10 @@ svg.append("path")
     .attr("class", "line")
     .attr("d", line);
 
-
-
-var circle = svg.selectAll("circle")
+var circle = svg
+    .append("g")
+    .attr("class","g-circles")
+    .selectAll("circle")
     .data(data)
     .enter()
     .append("circle")
@@ -92,215 +96,31 @@ var circle = svg.selectAll("circle")
         stroke: 'black'
     });
 
-var animDuration = 500;
+// var animDuration = 500;
 
-var chart = {};
+// var chart = {};
 
-circle.on("mouseover", function(){
-
-  var selectedShape = d3.select(this);
-
-  if (chart.tooltipGroup !== null && chart.tooltipGroup !== undefined) {
-    chart.tooltipGroup.remove();
-  }
-
-  chart.tooltipGroup = svg.append("g");
-
-  selectedShape.transition()
-      .duration(100)
-      .attr("opacity",.8);
-
-   var cx = parseFloat(selectedShape.attr("cx")),
-      cy = parseFloat(selectedShape.attr("cy")),
-      fill = selectedShape.attr("stroke");
-
-  //MAKE SURE TO HAT-TIP DIMPLE.JS
-
-  //line to x axis
-  chart.tooltipGroup.append("line")
-     .attr("x1", cx)
-     .attr("y1", cy)
-     .attr("x2", cx)
-     .attr("y2", cy)
-     .style("fill", "none")
-     .style("stroke", "#444")
-     .style("stroke-width", 2)
-     .style("stroke-dasharray", ("3, 3"))
-     // .style("opacity", opacity)
-     .transition()
-         // .delay(animDuration / 2)
-         .duration(animDuration / 2)
-         .ease("linear")
-             // Added 1px offset to cater for svg issue where a transparent
-             // group overlapping a line can sometimes hide it in some browsers
-             // Issue #10
-             .attr("y2", height);
-
-  //line to y axis
-  chart.tooltipGroup.append("line")
-     .attr("x1", cx)
-     .attr("y1", cy)
-     .attr("x2", cx)
-     .attr("y2", cy)
-     .style("fill", "none")
-     .style("stroke", "#444")
-     .style("stroke-width", 2)
-     .style("stroke-dasharray", ("3, 3"))
-     // .style("opacity", opacity)
-     .transition()
-         // .delay(animDuration / 2)
-         .duration(animDuration / 2)
-         .ease("linear")
-             // Added 1px offset to cater for svg issue where a transparent
-             // group overlapping a line can sometimes hide it in some browsers
-             // Issue #10
-             .attr("x2", 0);
-
-}).on("mouseout",function(){
-    d3.select(this).transition()
-        .duration(100)
-        .attr("opacity",0);
-    if (chart.tooltipGroup !== null && chart.tooltipGroup !== undefined) {
-        chart.tooltipGroup.remove();
-    }
-})
-
-
-
-var divSlider = d3.select("body").append("div").attr("id","slider");
-
-var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(m).min(1).step(.5).value(15);
-
-divSlider
-    .style({
-      width: width + "px",
-      "margin-left": margin.left + "px"
-    });
-
-d3.select('#slider').call(sliderCall);
-
-var diffGroup = svg.append("g").attr("class","divGroup");
-
-//line to y axis
-var diffLine = diffGroup.append("line")
-    .attr({
-        x1: x(15),
-        y1: y(10000/15),
-        x2: x(15+10),
-        y2: y(10000/(15+10))
-      })
-   .style("fill", "none")
-   .style("stroke", "#444")
-   .style("stroke-width", 2)
-   .style("stroke-dasharray", ("3, 3"));
-
-var xLineA = diffGroup.append("line")
-    .attr({
-        x1: x(15),
-        y1: y(10000/15),
-        x2: x(15),
-        y2: y(0)
-      })
-   .style("fill", "none")
-   .style("stroke", "#444")
-   .style("stroke-width", 2)
-   .style("stroke-dasharray", ("3, 3"));
-
-var yLineA = diffGroup.append("line")
-    .attr({
-        x1: x(15),
-        y1: y(10000/15),
-        x2: x(0),
-        y2: y(10000/15)
-      })
-   .style("fill", "none")
-   .style("stroke", "#444")
-   .style("stroke-width", 2)
-   .style("stroke-dasharray", ("3, 3"));
-
-var xLineB = diffGroup.append("line")
-    .attr({
-        x1: x(25),
-        y1: y(10000/25),
-        x2: x(25),
-        y2: y(0)
-      })
-   .style("fill", "none")
-   .style("stroke", "#444")
-   .style("stroke-width", 2)
-   .style("stroke-dasharray", ("3, 3"));
-
-var yLineB = diffGroup.append("line")
-    .attr({
-        x1: x(25),
-        y1: y(10000/25),
-        x2: x(0),
-        y2: y(10000/25)
-      })
-   .style("fill", "none")
-   .style("stroke", "#444")
-   .style("stroke-width", 2)
-   .style("stroke-dasharray", ("3, 3"));
-
-function slide(event, val){
-
-  diffLine.attr({
-    x1: x(val),
-    y1: y(10000/val),
-    x2: x(val+10),
-    y2: y(10000/(val+10))
-  });
-
-  xLineA.attr({
-    x1: x(val),
-    y1: y(10000/val),
-    x2: x(val),
-    y2: y(0)
-  });
-
-  yLineA.attr({
-    x1: x(val),
-    y1: y(10000/(val)),
-    x2: x(0),
-    y2: y(10000/(val))
-  });
-
-  xLineB.attr({
-    x1: x(val+10),
-    y1: y(10000/(val+10)),
-    x2: x(val+10),
-    y2: y(0)
-  });
-
-  yLineB.attr({
-    x1: x(val+10),
-    y1: y(10000/(val+10)),
-    x2: x(0),
-    y2: y(10000/(val+10))
-  });
-
-
-}
-
-
-
-
-// var linesearch = false;
-
-// circle.on("click", function(){
-
-//   if(linesearch){
-//     chart.diffGroup = svg.append("line")
-//   }
+// circle.on("mouseover", function(){
 
 //   var selectedShape = d3.select(this);
 
-//   var cx = parseFloat(selectedShape.attr("cx")),
-//      cy = parseFloat(selectedShape.attr("cy")),
-//      fill = selectedShape.attr("stroke");
+//   if (chart.tooltipGroup !== null && chart.tooltipGroup !== undefined) {
+//     chart.tooltipGroup.remove();
+//   }
+
+//   chart.tooltipGroup = svg.append("g");
+
+//   selectedShape.transition()
+//       .duration(100)
+//       .attr("opacity",.8);
+
+//    var cx = parseFloat(selectedShape.attr("cx")),
+//       cy = parseFloat(selectedShape.attr("cy")),
+//       fill = selectedShape.attr("stroke");
+
 
 //   //line to x axis
-//   chart.diffGroup = svg.append("line")
+//   chart.tooltipGroup.append("line")
 //      .attr("x1", cx)
 //      .attr("y1", cy)
 //      .attr("x2", cx)
@@ -308,26 +128,361 @@ function slide(event, val){
 //      .style("fill", "none")
 //      .style("stroke", "#444")
 //      .style("stroke-width", 2)
-//      // .style("stroke-dasharray", ("3, 3"))
+//      .style("stroke-dasharray", ("3, 3"))
+//      // .style("opacity", opacity)
+//      .transition()
+//          // .delay(animDuration / 2)
+//          .duration(animDuration / 2)
+//          .ease("linear")
+//              // Added 1px offset to cater for svg issue where a transparent
+//              // group overlapping a line can sometimes hide it in some browsers
+//              // Issue #10
+//              .attr("y2", height);
 
-//   linesearch = true;
+//   //line to y axis
+//   chart.tooltipGroup.append("line")
+//      .attr("x1", cx)
+//      .attr("y1", cy)
+//      .attr("x2", cx)
+//      .attr("y2", cy)
+//      .style("fill", "none")
+//      .style("stroke", "#444")
+//      .style("stroke-width", 2)
+//      .style("stroke-dasharray", ("3, 3"))
+//      // .style("opacity", opacity)
+//      .transition()
+//          // .delay(animDuration / 2)
+//          .duration(animDuration / 2)
+//          .ease("linear")
+//              // Added 1px offset to cater for svg issue where a transparent
+//              // group overlapping a line can sometimes hide it in some browsers
+//              // Issue #10
+//              .attr("x2", 0);
 
-// });
-
-// background.on("click", function(){
-//   if(linesearch){
-//      d3.selectAll(chart.diffGroup[0]).remove();
-//     console.log('hello')
-//   } 
+// }).on("mouseout",function(){
+//     d3.select(this).transition()
+//         .duration(100)
+//         .attr("opacity",0);
+//     if (chart.tooltipGroup !== null && chart.tooltipGroup !== undefined) {
+//         chart.tooltipGroup.remove();
+//     }
 // })
 
-// background.on("mousemove", function(){
+var divSlider = d3.select("body").append("div").attr("id","slider");
 
-//   if(linesearch){
-//     var m = d3.mouse(this);
-//       d3.selectAll(chart.diffGroup[0])
-//         .attr("x2", m[0])
-//         .attr("y2", m[1])
-//   }
+var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(m-10).min(8).step(.5).value(15);
 
-// })
+divSlider
+    .style({
+      width: width - x(18) + "px",
+      "margin-top": -45 + "px",
+      "margin-left": margin.left + x(8) + "px"
+    });
+
+d3.select('#slider').call(sliderCall);
+
+var diffGroup = svg.append("g").attr("class","diffGroup");
+
+var val = 15;
+
+var xa = x(val),
+  xb = x(val + 10),
+  ya = y(10000/val),
+  yb = y(10000/(val+10));
+
+//line to y axis
+var diffLine = diffGroup.append("line")
+    .attr({
+        x1: xa,
+        y1: ya,
+        x2: xb,
+        y2: yb,
+        class: "reach"
+      });
+
+var xLineA = diffGroup.append("line")
+    .attr({
+        x1: xa,
+        y1: ya,
+        x2: xa,
+        y2: y(0),
+        class: "reach"
+      })
+
+var yLineA = diffGroup.append("line")
+    .attr({
+        x1: xa,
+        y1: ya,
+        x2: x(0),
+        y2: ya,
+        class: "reach"
+      })
+
+var xLineB = diffGroup
+  .append("line")
+      .attr({
+          x1: xb,
+          y1: yb,
+          x2: xb,
+          y2: y(0),
+          class: "reach"
+        })
+
+var yLineB = diffGroup
+  .append("line")
+      .attr({
+          x1: xb,
+          y1: yb,
+          x2: x(0),
+          y2: yb,
+          class: "reach"
+        });
+
+var format = d3.format(".3r");
+
+var yTextGA = diffGroup.append("g")
+  .attr("class","value-label")
+  .attr("transform","translate(" + 0 + "," + ya + ")");
+
+yTextGA.append("rect")
+  .attr({
+    x: 5,
+    y: -30,
+    rx: 3,
+    width: 40,
+    height: 25,
+  })
+
+var yTextGAText = yTextGA.append("text")
+  .text(format(10000/15))
+  .attr({
+    x: 12.5,
+    y: -12.5
+  });
+
+var yTextGB = diffGroup.append("g")
+  .attr("class","value-label")
+  .attr("transform","translate(" + 0 + "," + yb + ")");
+
+yTextGB.append("rect")
+  .attr({
+    x: 5,
+    y: 5,
+    rx: 3,
+    width: 40,
+    height: 25,
+  });
+
+var yTextGBText = yTextGB.append("text")
+  .text(format(10000/25))
+  .attr({
+    x: 12.5,
+    y: 22.5
+  });
+
+//========
+var xTextGA = diffGroup.append("g")
+  .attr("class","value-label")
+  .attr("transform","translate(" +  xa  + "," + y(0) + ")");
+
+xTextGA.append("rect")
+  .attr({
+    x: -35,
+    y: -30,
+    rx: 3,
+    width: 30,
+    height: 25,
+  })
+
+var xTextGAText = xTextGA.append("text")
+  .text(d3.round(val))
+  .attr({
+    x: -12.5,
+    y: -12.5
+  })
+  .style("text-anchor", "end");
+
+var xTextGB = diffGroup.append("g")
+  .attr("class","value-label")
+  .attr("transform","translate(" +  xb  + "," + y(0) + ")");
+
+xTextGB.append("rect")
+  .attr({
+    x: 5,
+    y: -30,
+    rx: 3,
+    width: 30,
+    height: 25,
+  });
+
+var xTextGBText = xTextGB.append("text")
+  .text(d3.round(val+10))
+  .attr({
+    x: 12.5,
+    y: -12.5
+  })
+  .style("text-anchor", "start");
+
+//======
+
+var yDiffText = diffGroup.append("g")
+  .attr("class","difference")
+  .attr("transform", "translate(" + (-5) + "," + (yb + ya)/2 + ")");
+
+yDiffText.append("rect")
+  .attr({
+    width: 45,
+    height: 25,
+    y: -12.5,
+    x: 30,
+    rx: 3
+  });
+
+var t = yDiffText
+  .append("text")
+    .text(format((ya) - (yb)))
+    .attr("dy","5px")
+    .attr("dx","35px");
+
+
+//====
+
+var xDiffText = diffGroup.append("g")
+  .attr("class","difference")
+  .attr("transform", "translate(" +  (xa + xb)/2 + "," + (y(0) - 10) + ")");
+
+xDiffText.append("rect")
+  .attr({
+    width: 30,
+    height: 25,
+    y: -32.5,
+    x: -15,
+    rx: 3
+  })
+
+xDiffText
+  .append("text")
+    .text("10")
+    .attr("dx","-7.5px")
+    .attr("dy","-15px");
+
+
+//====
+
+var yArrowGroup = diffGroup
+  .append("g")
+    .classed("arrow", true)
+    .attr( "transform", "translate(" + 15 + "," + yb + ")" );
+
+var yGapLine = yArrowGroup
+  .append("line")
+    .attr({
+      x1: 0,
+      y1: ya - yb+3,
+      x2: 0,
+      y2: -3,
+    });
+
+yArrowGroup
+  .append("path")
+    .attr("class", "arrowHead")
+    .attr("d","M0,-3 L-5,-10 M5,-10 L0,-3")
+//====
+
+//====
+var xArrowGroup = diffGroup
+  .append("g")
+    .classed("arrow", true)
+    .attr( "transform", "translate(" + xb + "," + (y(0)-7.5) + ")" );
+
+var xGapLine = xArrowGroup
+  .append("line")
+    .attr({
+      x2: -3,
+      x1: xa - xb + 3,
+      y1: 0,
+      y2: 0,
+    });
+
+xArrowGroup
+  .append("path")
+    .attr("d","M0,-3 L-5,-10 M5,-10 L0,-3")
+    .attr("transform","rotate(-90)")
+    .attr("class", "arrowHead")
+//====
+
+function slide(event, val){
+
+var xa = x(val),
+  xb = x(val + 10),
+  ya = y(10000/val),
+  yb = y(10000/(val+10));
+
+  diffLine.attr({
+    x1: xa,
+    y1: ya,
+    x2: xb,
+    y2: yb
+  });
+
+  xLineA.attr({
+    x1: xa,
+    y1: ya,
+    x2: xa,
+    y2: y(0)
+  });
+
+  yLineA.attr({
+    x1: xa,
+    y1: ya,
+    x2: x(0),
+    y2: ya
+  });
+
+  xLineB.attr({
+    x1: xb,
+    y1: yb,
+    x2: xb,
+    y2: y(0)
+  });
+
+  yLineB.attr({
+    x1: xb,
+    y1: yb,
+    x2: x(0),
+    y2: yb
+  });
+
+  yDiffText.attr("transform", "translate(" + 0 + "," + (ya + yb)/2 + ")");
+
+  t.text(
+    format(ya - yb)
+    );
+
+  if((10000/val) >= 1000) yTextGA.selectAll("rect").attr("width","47.5px")  
+  if((10000/val) < 1000) yTextGA.selectAll("rect").attr("width","40px")  
+
+  xDiffText.attr("transform", "translate(" +  (xa + xb)/2 + "," + (y(0) - 10) + ")");
+
+  yArrowGroup.attr("transform", "translate(" + 15 + "," + yb + ")" );
+
+  yGapLine.attr("y1", ya - yb + 3);
+
+  xArrowGroup.attr("transform", "translate(" + xb + "," + (y(0)-7.5) + ")" );
+
+  xGapLine.attr("x1", xa - xb + 3);
+
+  yTextGAText.text(format(10000/val));
+  yTextGBText.text(format(10000/(val+10)));
+  xTextGAText.text(d3.round(val,0));
+  xTextGBText.text(d3.round(val+10,0));
+
+  yTextGA.attr("transform","translate(" + 0 + "," + ya + ")");
+  yTextGB.attr("transform","translate(" + 0 + "," + yb + ")");
+  xTextGA.attr("transform","translate(" + xa + "," + y(0) + ")");
+  xTextGB.attr("transform","translate(" + xb + "," + y(0) + ")");
+
+
+}
+
+

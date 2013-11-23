@@ -23,6 +23,15 @@ body {
   stroke-width: 2px;
 }
 
+.diffGroup path{
+  stroke: #444;
+}
+
+.diffGroup line{
+  stroke-width: 2;
+  stroke: #444;
+}
+
 div.tooltip {   
   position: absolute;           
   text-align: center;           
@@ -36,12 +45,35 @@ div.tooltip {
   font-size: 14px;      
 }
 
+.reach{
+  fill: none;
+  stroke: #444;
+  stroke-width: 2;
+  stroke-dasharray: 3,3;
+}
+
 .front {
   fill: #E33131;
 }
 
 .back.bar{
   fill: #696969;
+}
+
+.value-label rect,
+.difference rect{
+  fill: ;
+  fill: #ccc;
+  opacity: 0.75;
+}
+
+.d3-slider-handle{
+  cursor: pointer;
+}
+
+.arrow path{
+  stroke-width: 2px;
+  stroke: #444;
 }
 
 /*.dot{
