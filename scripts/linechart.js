@@ -7,6 +7,9 @@ var data = d3.range(8,m).map(function(d,i){
   }
 });
 
+var format = d3.format(".3r");
+
+
 var margin = {top: 47.5, right: 45, bottom: 70, left: 90},
     width = 620 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -96,77 +99,35 @@ var circle = svg
         stroke: 'black'
     });
 
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
 // var animDuration = 500;
 
-// var chart = {};
+var chart = {};
 
-// circle.on("mouseover", function(){
+circle.on("mouseover", function(d){
 
-//   var selectedShape = d3.select(this);
+  d3.select(this).transition().duration(100).attr("opacity", 1)
 
-//   if (chart.tooltipGroup !== null && chart.tooltipGroup !== undefined) {
-//     chart.tooltipGroup.remove();
-//   }
+ div.transition()        
+     .duration(100)      
+     .style("opacity", .9);   
 
-//   chart.tooltipGroup = svg.append("g");
+ div .html("miles/gallon: "   + d3.round(d.x)  + "<br/>" + "gallons consumed: " + format(d.y))  
+     .style("left", (d3.event.pageX + 10) + "px")     
+     .style("top", (d3.event.pageY - 65) + "px");
 
-//   selectedShape.transition()
-//       .duration(100)
-//       .attr("opacity",.8);
+}).on("mouseout",function(){
 
-//    var cx = parseFloat(selectedShape.attr("cx")),
-//       cy = parseFloat(selectedShape.attr("cy")),
-//       fill = selectedShape.attr("stroke");
+  d3.select(this).transition().duration(150).attr("opacity", 0)
 
+      div.transition()        
+                .duration(500)      
+                .style("opacity", 0); 
 
-//   //line to x axis
-//   chart.tooltipGroup.append("line")
-//      .attr("x1", cx)
-//      .attr("y1", cy)
-//      .attr("x2", cx)
-//      .attr("y2", cy)
-//      .style("fill", "none")
-//      .style("stroke", "#444")
-//      .style("stroke-width", 2)
-//      .style("stroke-dasharray", ("3, 3"))
-//      // .style("opacity", opacity)
-//      .transition()
-//          // .delay(animDuration / 2)
-//          .duration(animDuration / 2)
-//          .ease("linear")
-//              // Added 1px offset to cater for svg issue where a transparent
-//              // group overlapping a line can sometimes hide it in some browsers
-//              // Issue #10
-//              .attr("y2", height);
-
-//   //line to y axis
-//   chart.tooltipGroup.append("line")
-//      .attr("x1", cx)
-//      .attr("y1", cy)
-//      .attr("x2", cx)
-//      .attr("y2", cy)
-//      .style("fill", "none")
-//      .style("stroke", "#444")
-//      .style("stroke-width", 2)
-//      .style("stroke-dasharray", ("3, 3"))
-//      // .style("opacity", opacity)
-//      .transition()
-//          // .delay(animDuration / 2)
-//          .duration(animDuration / 2)
-//          .ease("linear")
-//              // Added 1px offset to cater for svg issue where a transparent
-//              // group overlapping a line can sometimes hide it in some browsers
-//              // Issue #10
-//              .attr("x2", 0);
-
-// }).on("mouseout",function(){
-//     d3.select(this).transition()
-//         .duration(100)
-//         .attr("opacity",0);
-//     if (chart.tooltipGroup !== null && chart.tooltipGroup !== undefined) {
-//         chart.tooltipGroup.remove();
-//     }
-// })
+})
 
 var divSlider = d3.select("body").append("div").attr("id","slider");
 
@@ -238,7 +199,6 @@ var yLineB = diffGroup
           class: "reach"
         });
 
-var format = d3.format(".3r");
 
 var yTextGA = diffGroup.append("g")
   .attr("class","value-label")

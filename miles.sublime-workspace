@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"xTe",
+				"xTextGA"
+			],
+			[
 				"max",
 				"maxMpg"
 			],
@@ -87,46 +91,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "barchart.html",
-			"settings":
-			{
-				"buffer_size": 1035,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/barchart.js",
-			"settings":
-			{
-				"buffer_size": 2371,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "linechart.html",
-			"settings":
-			{
-				"buffer_size": 1068,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/linechart.js",
-			"settings":
-			{
-				"buffer_size": 7352,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "todo.txt",
-			"settings":
-			{
-				"buffer_size": 430,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -219,9 +183,10 @@
 	},
 	"file_history":
 	[
-		"/home/lewis/Documents/github/miles/scripts/linechart.js",
-		"/home/lewis/Documents/github/miles/todo.txt",
 		"/home/lewis/Documents/github/miles/styles/style.css",
+		"/home/lewis/Documents/github/miles/todo.txt",
+		"/home/lewis/Documents/github/miles/linechart.html",
+		"/home/lewis/Documents/github/miles/scripts/linechart.js",
 		"/home/lewis/Documents/github/miles/barchart.html",
 		"/home/lewis/Documents/github/miles/scripts/barchart.js",
 		"/home/lewis/Documents/github/miles/index.html",
@@ -345,8 +310,7 @@
 		"/home/lewis/Documents/github/sfpark/data/example_request.json",
 		"/home/lewis/Documents/github/sfpark/scripts/location.parser.js",
 		"/home/lewis/Documents/github/sfpark/data/locs_with_keys.json",
-		"/home/lewis/Documents/github/sfpark/scraper/indextest.js",
-		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser.js"
+		"/home/lewis/Documents/github/sfpark/scraper/indextest.js"
 	],
 	"find":
 	{
@@ -364,6 +328,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"format",
+			"gallons consumed",
+			"dasharray",
+			"path",
+			"format",
+			"axis",
+			"difftext",
+			"xaue",
+			"x(15)",
+			"x(25)",
+			"x(15)",
+			"0.5",
+			"y(yb)",
+			"y(ya)",
+			"x(xb)",
+			"x(xa)",
+			"val",
+			"val+10",
+			"10000/25",
+			"10000/15",
+			"GB",
+			"yaxis",
 			"cy",
 			"cx",
 			"cy",
@@ -469,29 +455,7 @@
 			"800",
 			"350",
 			"00",
-			"1600",
-			"300",
-			"lightgreen",
-			"rose",
-			"coral",
-			"wishtimes",
-			"newtimes",
-			"totimes",
-			"danger",
-			"Pause",
-			"');\n",
-			"warning",
-			"danger",
-			"transit",
-			"totalCost",
-			"TollChart",
-			"tChart",
-			"tc",
-			"tChart",
-			"mc",
-			"cc",
-			"asdf",
-			"tollChart"
+			"1600"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -499,6 +463,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"value",
+			"xa",
+			"xb",
+			"xa",
+			"yb",
+			"ya",
+			"xb",
+			"xa",
+			"xb",
+			"yb",
+			"ya",
 			"expense",
 			"cost",
 			"l",
@@ -556,155 +531,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "barchart.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								492,
-								492
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "scripts/barchart.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2371,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2371,
-								2371
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 812.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "linechart.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1068,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "scripts/linechart.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5643,
-								5643
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3455.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "todo.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 430,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269,
-								269
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -715,7 +543,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -758,7 +586,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -766,6 +594,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"style",
+				"styles/style.css"
+			],
 			[
 				"todo",
 				"todo.txt"
@@ -937,10 +769,6 @@
 			[
 				"tooltip",
 				"scripts/node_modules/togeojson/node_modules/jsdom/node_modules/cssstyle/lib/properties/webkitPerspective.js"
-			],
-			[
-				"style",
-				"style/style.css"
 			],
 			[
 				"todo.txt",
