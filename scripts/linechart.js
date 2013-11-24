@@ -2,7 +2,7 @@ var m = 55;
 
 var data = d3.range(8,m).map(function(d,i){
   return {
-    y: 10000/d,
+    y: 13500/d,
     x: d
   }
 });
@@ -36,7 +36,7 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.x); })
     .y(function(d) { return y(d.y); });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#lineChart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -51,7 +51,7 @@ var background = svg.append("rect")
   });
 
 x.domain([0,m]);
-y.domain([0,1200]);
+y.domain([0,1800]);
 
 svg.append("g")
     .attr("class", "x axis")
@@ -62,7 +62,7 @@ svg.append("g")
   .attr("x", width - 5)
   .attr("dy", "3em")
   .style("text-anchor", "end")
-  .text("miles/gallon");
+  .text("mpg");
 
 svg.append("g")
     .attr("class", "y axis")
@@ -72,7 +72,7 @@ svg.append("g")
     .attr("y", 6)
     .attr("dy", "-5em")
     .style("text-anchor", "end")
-    .text("gallons consumed");
+    .text("gallons/year");
 
 
 svg.append("path")
@@ -115,7 +115,7 @@ circle.on("mouseover", function(d){
      .duration(100)      
      .style("opacity", .9);   
 
- div .html("miles/gallon: "   + d3.round(d.x)  + "<br/>" + "gallons consumed: " + format(d.y))  
+ div .html("mpg:  "   + d3.round(d.x)  + "<br/>" + "gallons/year: " + format(d.y))  
      .style("left", (d3.event.pageX + 10) + "px")     
      .style("top", (d3.event.pageY - 65) + "px");
 
@@ -148,8 +148,8 @@ var val = 15;
 
 var xa = x(val),
   xb = x(val + 10),
-  ya = y(10000/val),
-  yb = y(10000/(val+10));
+  ya = y(13500/val),
+  yb = y(13500/(val+10));
 
 //line to y axis
 var diffLine = diffGroup.append("line")
@@ -214,7 +214,7 @@ yTextGA.append("rect")
   })
 
 var yTextGAText = yTextGA.append("text")
-  .text(format(10000/15))
+  .text(format(13500/15))
   .attr({
     x: 12.5,
     y: -12.5
@@ -234,7 +234,7 @@ yTextGB.append("rect")
   });
 
 var yTextGBText = yTextGB.append("text")
-  .text(format(10000/25))
+  .text(format(13500/25))
   .attr({
     x: 12.5,
     y: 22.5
@@ -375,8 +375,8 @@ function slide(event, val){
 
 var xa = x(val),
   xb = x(val + 10),
-  ya = y(10000/val),
-  yb = y(10000/(val+10));
+  ya = y(13500/val),
+  yb = y(13500/(val+10));
 
   diffLine.attr({
     x1: xa,
@@ -419,8 +419,8 @@ var xa = x(val),
     format(ya - yb)
     );
 
-  if((10000/val) >= 1000) yTextGA.selectAll("rect").attr("width","47.5px")  
-  if((10000/val) < 1000) yTextGA.selectAll("rect").attr("width","40px")  
+  if((13500/val) >= 1000) yTextGA.selectAll("rect").attr("width","47.5px")  
+  if((13500/val) < 1000) yTextGA.selectAll("rect").attr("width","40px")  
 
   xDiffText.attr("transform", "translate(" +  (xa + xb)/2 + "," + (y(0) - 10) + ")");
 
@@ -432,8 +432,8 @@ var xa = x(val),
 
   xGapLine.attr("x1", xa - xb + 3);
 
-  yTextGAText.text(format(10000/val));
-  yTextGBText.text(format(10000/(val+10)));
+  yTextGAText.text(format(13500/val));
+  yTextGBText.text(format(13500/(val+10)));
   xTextGAText.text(d3.round(val,0));
   xTextGBText.text(d3.round(val+10,0));
 
