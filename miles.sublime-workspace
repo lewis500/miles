@@ -91,6 +91,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "scripts/linechart.js",
+			"settings":
+			{
+				"buffer_size": 8628,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "text.txt",
+			"settings":
+			{
+				"buffer_size": 914,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "linechart.html",
+			"settings":
+			{
+				"buffer_size": 1485,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -328,6 +352,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"10000",
 			"format",
 			"gallons consumed",
 			"dasharray",
@@ -454,8 +479,7 @@
 			"1200",
 			"800",
 			"350",
-			"00",
-			"1600"
+			"00"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -463,6 +487,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"13500",
 			"value",
 			"xa",
 			"xb",
@@ -531,13 +556,94 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "scripts/linechart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2022,
+								2022
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "text.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "linechart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -558,18 +664,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -594,6 +693,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"linechart",
+				"linechart.html"
+			],
+			[
+				"text",
+				"text.txt"
+			],
+			[
+				"linechar",
+				"scripts/linechart.js"
+			],
 			[
 				"style",
 				"styles/style.css"
@@ -980,7 +1091,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 97.0,
+	"side_bar_width": 165.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

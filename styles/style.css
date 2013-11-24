@@ -28,8 +28,8 @@ body {
 }
 
 .diffGroup line{
+  /*stroke: #444;*/
   stroke-width: 2;
-  stroke: #444;
 }
 
 div.tooltip {   
@@ -47,9 +47,21 @@ div.tooltip {
 
 .reach{
   fill: none;
-  stroke: #444;
+  /*stroke: #444;*/
   stroke-width: 2;
   stroke-dasharray: 3,3;
+}
+
+.current{
+  stroke: #2ecc71;
+}
+
+.replacement{
+  stroke: #3498db;
+}
+
+.neutral{
+  stroke: #444;
 }
 
 .front {

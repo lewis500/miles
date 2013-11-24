@@ -158,7 +158,7 @@ var diffLine = diffGroup.append("line")
         y1: ya,
         x2: xb,
         y2: yb,
-        class: "reach"
+        class: "reach neutral"
       });
 
 var xLineA = diffGroup.append("line")
@@ -167,7 +167,8 @@ var xLineA = diffGroup.append("line")
         y1: ya,
         x2: xa,
         y2: y(0),
-        class: "reach"
+        class: "reach current",
+        stroke: "#2ecc71"
       })
 
 var yLineA = diffGroup.append("line")
@@ -176,7 +177,7 @@ var yLineA = diffGroup.append("line")
         y1: ya,
         x2: x(0),
         y2: ya,
-        class: "reach"
+        class: "reach current"
       })
 
 var xLineB = diffGroup
@@ -186,7 +187,7 @@ var xLineB = diffGroup
           y1: yb,
           x2: xb,
           y2: y(0),
-          class: "reach"
+          class: "reach replacement"
         })
 
 var yLineB = diffGroup
@@ -196,7 +197,7 @@ var yLineB = diffGroup
           y1: yb,
           x2: x(0),
           y2: yb,
-          class: "reach"
+          class: "reach replacement"
         });
 
 
@@ -341,6 +342,7 @@ var yGapLine = yArrowGroup
       y1: ya - yb+3,
       x2: 0,
       y2: -3,
+      class: "neutral"
     });
 
 yArrowGroup
@@ -362,6 +364,7 @@ var xGapLine = xArrowGroup
       x1: xa - xb + 3,
       y1: 0,
       y2: 0,
+      class: "neutral"
     });
 
 xArrowGroup
@@ -370,6 +373,31 @@ xArrowGroup
     .attr("transform","rotate(-90)")
     .attr("class", "arrowHead")
 //====
+
+//===
+
+var col = {"curent": "#2ecc71", "replacement":  "#3498db"}
+
+var legend = svg.selectAll(".legend")
+    .data(d3.keys(col))
+  .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+legend.append("rect")
+    .attr("x", width - 18)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", function(d){return col[d]; });
+
+legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function(d) { return d; });
+
+//===
 
 function slide(event, val){
 
