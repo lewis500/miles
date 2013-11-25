@@ -444,7 +444,7 @@ var xa = x(val),
   yDiffText.attr("transform", "translate(" + 0 + "," + (ya + yb)/2 + ")");
 
   t.text(
-    format(ya - yb)
+    format(13500/val - 13500/(val+10))
     );
 
   if((13500/val) >= 1000) yTextGA.selectAll("rect").attr("width","47.5px")  
