@@ -129,15 +129,16 @@ circle.on("mouseover", function(d){
 
 })
 
-var divSlider = d3.select("body").append("div").attr("id","slider");
+// var divSlider = d3.select("body").append("div").attr("id","slider");
 
 var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(m-10).min(8).step(.5).value(15);
 
-divSlider
+d3.select("#slider")
     .style({
       width: width - x(18) + "px",
       "margin-top": -45 + "px",
-      "margin-left": margin.left + x(8) + "px"
+      "margin-left": margin.left + x(8) + "px",
+      "margin-bottom": 30 + "px"
     });
 
 d3.select('#slider').call(sliderCall);
