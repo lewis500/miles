@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"xT",
+				"xt"
+			],
+			[
 				"xTe",
 				"xTextGA"
 			],
@@ -91,14 +95,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "scripts/linechart.js",
-			"settings":
-			{
-				"buffer_size": 9331,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -191,11 +187,12 @@
 	},
 	"file_history":
 	[
-		"/home/lewis/Documents/github/miles/text.txt",
-		"/home/lewis/Documents/github/miles/styles/style.css",
-		"/home/lewis/Documents/github/miles/linechart.html",
 		"/home/lewis/Documents/github/miles/todo.txt",
+		"/home/lewis/Documents/github/miles/text.txt",
+		"/home/lewis/Documents/github/miles/scripts/linechart2.js",
+		"/home/lewis/Documents/github/miles/linechart.html",
 		"/home/lewis/Documents/github/miles/scripts/linechart.js",
+		"/home/lewis/Documents/github/miles/styles/style.css",
 		"/home/lewis/Documents/github/miles/barchart.html",
 		"/home/lewis/Documents/github/miles/scripts/barchart.js",
 		"/home/lewis/Documents/github/miles/index.html",
@@ -317,8 +314,7 @@
 		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser_csv2.js",
 		"/home/lewis/Documents/github/sfpark/data/example_request.json",
 		"/home/lewis/Documents/github/sfpark/scripts/location.parser.js",
-		"/home/lewis/Documents/github/sfpark/data/locs_with_keys.json",
-		"/home/lewis/Documents/github/sfpark/scraper/indextest.js"
+		"/home/lewis/Documents/github/sfpark/data/locs_with_keys.json"
 	],
 	"find":
 	{
@@ -336,6 +332,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",1",
+			"+ 10",
+			"slider2",
+			"val",
+			"#slider",
+			"gasoline",
+			"seems",
+			"m.p.g.",
+			"mpg",
+			"miles per gallon",
+			"slide",
 			"curent",
 			"10000",
 			"format",
@@ -452,18 +459,7 @@
 			"choose",
 			"label",
 			"this.choose",
-			"choice",
-			"index",
-			"choose",
-			"range(",
-			"400",
-			"totalcost",
-			"height =",
-			"1600",
-			"400",
-			"1200",
-			"800",
-			"350"
+			"choice"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -471,6 +467,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"mpg",
+			"m.p.g.",
+			"mpg",
 			"13500",
 			"value",
 			"xa",
@@ -540,45 +539,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "scripts/linechart.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9331,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7339,
-								7339
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4719.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -623,12 +591,24 @@
 		"selected_items":
 		[
 			[
-				"style.css",
-				"styles/style.css"
+				"text.txt",
+				"text.txt"
+			],
+			[
+				"todo",
+				"todo.txt"
+			],
+			[
+				"linechart.js",
+				"scripts/linechart.js"
 			],
 			[
 				"linechart",
 				"linechart.html"
+			],
+			[
+				"style.css",
+				"styles/style.css"
 			],
 			[
 				"text",
@@ -641,14 +621,6 @@
 			[
 				"style",
 				"styles/style.css"
-			],
-			[
-				"todo",
-				"todo.txt"
-			],
-			[
-				"linechart.js",
-				"scripts/linechart.js"
 			],
 			[
 				"linech",

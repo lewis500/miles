@@ -1,3 +1,5 @@
+(function(){
+
 var m = 55;
 
 var data = d3.range(8,m).map(function(d,i){
@@ -36,7 +38,7 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.x); })
     .y(function(d) { return y(d.y); });
 
-var svg = d3.select("#lineChart").append("svg")
+var svg = d3.select("#lineChart2").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -131,22 +133,22 @@ circle.on("mouseover", function(d){
 
 // var divSlider = d3.select("body").append("div").attr("id","slider");
 
-var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(m-10).min(8).step(.5).value(15);
+var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(36).min(8).step(.5).value(15);
 
-d3.select("#slider")
+d3.select("#slider2")
     .style({
-      width: width - x(18) + "px",
+      width: width - x(27) + "px",
       "margin-top": -45 + "px",
       "margin-left": margin.left + x(8) + "px",
       "margin-bottom": 30 + "px"
     });
 
-d3.select('#slider').call(sliderCall);
+d3.select('#slider2').call(sliderCall);
 
 var diffGroup = svg.append("g").attr("class","diffGroup");
 
 var a = 15,
-  b = a + 10,
+  b = a*1.5,
   c = 13500/a,
   d = 13500/b,
   xa = x(a),
@@ -324,9 +326,9 @@ xDiffText.append("rect")
     rx: 3
   })
 
-xDiffText
+var xt = xDiffText
   .append("text")
-    .text("10")
+    .text(d3.round(b - a,0))
     .attr("dx","-7.5px")
     .attr("dy","-15px");
 
@@ -404,7 +406,7 @@ legend.append("text")
 
 function slide(event, a){
 
-var b = a + 10,
+var b = a*1.5,
   c = 13500/a,
   d = 13500/b,
   xa = x(a),
@@ -476,6 +478,8 @@ var xa = x(a),
   xTextGAText.text(d3.round(a,0));
   xTextGBText.text(d3.round(b,0));
 
+  xt.text(d3.round(b - a,0))
+
   yTextGA.attr("transform","translate(" + 0 + "," + ya + ")");
   yTextGB.attr("transform","translate(" + 0 + "," + yb + ")");
   xTextGA.attr("transform","translate(" + xa + "," + y(0) + ")");
@@ -485,3 +489,4 @@ var xa = x(a),
 }
 
 
+})();

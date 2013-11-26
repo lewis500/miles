@@ -1,5 +1,7 @@
 LINE CHART
 write text
+make the slider handle green
+
 
 
 
