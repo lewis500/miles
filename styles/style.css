@@ -3,6 +3,25 @@ body {
   padding: 40px;
       }
 
+#current{
+  background-color: #2ecc71;
+  color: white;
+  padding: 0px 3px 1px 3px;
+}
+#replacement{
+  background-color: #3498db;
+  color: white;
+  padding: 0px 3px 1px 3px;
+}
+
+.g-can.A{
+  fill: #2ecc71;
+}
+
+.g-can.B{
+  fill: #3498db;
+}
+
 .axis path,
 .axis line {
   fill: none;
@@ -11,10 +30,10 @@ body {
 }
 
 .d3-slider-handle{
-  border: 1px solid #737373;
+  /*border: 1px solid #737373;*/
   border-radius: 4px;
   background: #eee;
-  background: linear-gradient(to bottom, #BBBBBB 0%, #565656 100%);
+  background: linear-gradient(to bottom, #2ecc71 0%, #888 100%);
 }
 
 .line {
@@ -29,7 +48,7 @@ body {
 
 .diffGroup line{
   /*stroke: #444;*/
-  stroke-width: 2;
+  stroke-width: 2.5;
 }
 
 div.tooltip {   

@@ -9,8 +9,7 @@ var data = d3.range(8,m).map(function(d,i){
 
 var format = d3.format(".3r");
 
-
-var margin = {top: 47.5, right: 45, bottom: 70, left: 90},
+var margin = {top: 47.5, right: 80, bottom: 70, left: 90},
     width = 620 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -42,6 +41,54 @@ var svg = d3.select("#lineChart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+function gasCan(letter, xCo, h, val){
+
+  var y = d3.scale.linear().domain([0,1690]).range([h, 0])
+
+  var gasGroup = svg.append("g")
+    .attr({
+      transform: "translate(" + xCo + "," + 150 + ")",
+      class: "g-gas"
+    });
+
+  var clip = gasGroup.append("defs").append("svg:clipPath")
+      .attr("id", "clip" + letter)
+
+  var rec = clip.append("svg:rect")
+      .attr("id", "clip-rect")
+      .attr("y",y(val))
+      .attr("width", 72)
+      .attr("height", h - y(val));
+
+  var back = gasGroup.append("g").call(d3.sticker("#gasCanA"))
+
+  var overlay = gasGroup.append("g").call(d3.sticker("#gasCanB"));
+
+  // back.selectAll("path").style({
+  //   fill: ( letter == "A" ? "#2ecc71" : "#3498db"),
+  // });
+
+  overlay.attr({
+    // fill: "#e74c3c",
+    fill: ( letter == "A" ? "#2ecc71" : "#3498db"),
+    "clip-path": "url(#clip" + letter + ")"
+  });
+
+  back.append("g")
+    .attr("transform", "translate(" + [0,h] + ")")
+    .append("text")
+    .text( (letter=="A"? "current" : "replacement" ) )
+    .attr("dy","1.25em")
+    .style("text-anchor","start")
+
+  this.update = function(val){
+    rec
+      .attr("height", h - y(val))
+      .attr("y", y(val))
+  };
+  
+}
+
 var background = svg.append("rect")
   .attr({
     width: width,
@@ -59,10 +106,11 @@ svg.append("g")
     .call(xAxis)
 .append("text")
   // .attr("transform", "rotate(-90)")
-  .attr("x", width - 5)
-  .attr("dy", "3em")
+  .attr("x", width - 20)
+  .attr("dy", "2.5em")
   .style("text-anchor", "end")
-  .text("mpg");
+  .text("mpg")
+  .style("font-size","14px");
 
 svg.append("g")
     .attr("class", "y axis")
@@ -103,7 +151,16 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")               
     .style("opacity", 0);
 
-// var animDuration = 500;
+svg.append("g")
+  .attr("transform","translate(" + [width - 300, 15] + ")" )
+  .append("foreignObject")
+    .attr("width", 300)
+    .attr("height", 200)
+  .append("xhtml:div")
+    .style("width", 300 + "px")
+    // .attr("height", 200)
+    .html("<div>Drag the slider to change the mpg of your <span id='current'>current</span> vehicle. Notice how many gallons you save with a <span id='replacement'>replacement</span> that gets 10 more mpg.</div>");
+
 
 var chart = {};
 
@@ -153,6 +210,10 @@ var a = 15,
   xb = x(b),
   ya = y(c),
   yb = y(d);
+
+var canA = new gasCan("A", 250, 100, c);
+
+var canB = new gasCan("B", 375, 100, d);
 
 //line to y axis
 var diffLine = diffGroup.append("line")
@@ -213,12 +274,12 @@ yTextGA.append("rect")
     x: 5,
     y: -30,
     rx: 3,
-    width: 40,
+    width: 65,
     height: 25,
   })
 
 var yTextGAText = yTextGA.append("text")
-  .text(format(13500/15))
+  .text(format(13500/15) + " gal")
   .attr({
     x: 12.5,
     y: -12.5
@@ -233,12 +294,12 @@ yTextGB.append("rect")
     x: 5,
     y: 5,
     rx: 3,
-    width: 40,
+    width: 65,
     height: 25,
   });
 
 var yTextGBText = yTextGB.append("text")
-  .text(format(13500/25))
+  .text(format(13500/25)  + " gal")
   .attr({
     x: 12.5,
     y: 22.5
@@ -251,15 +312,15 @@ var xTextGA = diffGroup.append("g")
 
 xTextGA.append("rect")
   .attr({
-    x: -35,
+    x: -65,
     y: -30,
     rx: 3,
-    width: 30,
+    width: 60,
     height: 25,
   })
 
 var xTextGAText = xTextGA.append("text")
-  .text(d3.round(a))
+  .text(d3.round(a) + "mpg")
   .attr({
     x: -12.5,
     y: -12.5
@@ -275,12 +336,12 @@ xTextGB.append("rect")
     x: 5,
     y: -30,
     rx: 3,
-    width: 30,
+    width: 60,
     height: 25,
   });
 
 var xTextGBText = xTextGB.append("text")
-  .text(d3.round(b))
+  .text(d3.round(b)  + " mpg")
   .attr({
     x: 12.5,
     y: -12.5
@@ -291,11 +352,11 @@ var xTextGBText = xTextGB.append("text")
 
 var yDiffText = diffGroup.append("g")
   .attr("class","difference")
-  .attr("transform", "translate(" + (-5) + "," + (yb + ya)/2 + ")");
+  .attr("transform", "translate(" + 0 + "," + (yb + ya)/2 + ")");
 
 yDiffText.append("rect")
   .attr({
-    width: 45,
+    width: 65,
     height: 25,
     y: -12.5,
     x: 30,
@@ -304,7 +365,7 @@ yDiffText.append("rect")
 
 var t = yDiffText
   .append("text")
-    .text(format((ya) - (yb)))
+    .text(format((ya) - (yb))  + " gal")
     .attr("dy","5px")
     .attr("dx","35px");
 
@@ -317,17 +378,17 @@ var xDiffText = diffGroup.append("g")
 
 xDiffText.append("rect")
   .attr({
-    width: 30,
+    width: 60,
     height: 25,
     y: -32.5,
-    x: -15,
+    x: -25,
     rx: 3
   })
 
 xDiffText
   .append("text")
-    .text("10")
-    .attr("dx","-7.5px")
+    .text("10 mpg")
+    .attr("dx","-20px")
     .attr("dy","-15px");
 
 
@@ -377,45 +438,20 @@ xArrowGroup
     .attr("class", "arrowHead")
 //====
 
-//===
-
-var col = {"curent": "#2ecc71", "replacement":  "#3498db"}
-
-var legend = svg.selectAll(".legend")
-    .data(d3.keys(col))
-  .enter().append("g")
-    .attr("class", "legend")
-    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-legend.append("rect")
-    .attr("x", width - 18)
-    .attr("width", 18)
-    .attr("height", 18)
-    .style("fill", function(d){return col[d]; });
-
-legend.append("text")
-    .attr("x", width - 24)
-    .attr("y", 9)
-    .attr("dy", ".35em")
-    .style("text-anchor", "end")
-    .text(function(d) { return d; });
-
-//===
-
 function slide(event, a){
 
-var b = a + 10,
-  c = 13500/a,
-  d = 13500/b,
-  xa = x(a),
-  xb = x(b),
-  ya = y(c),
-  yb = y(d);
+  var b = a + 10,
+    c = 13500/a,
+    d = 13500/b,
+    xa = x(a),
+    xb = x(b),
+    ya = y(c),
+    yb = y(d);
 
-var xa = x(a),
-  xb = x(b),
-  ya = y(c),
-  yb = y(d);
+  var xa = x(a),
+    xb = x(b),
+    ya = y(c),
+    yb = y(d);
 
   diffLine.attr({
     x1: xa,
@@ -454,12 +490,8 @@ var xa = x(a),
 
   yDiffText.attr("transform", "translate(" + 0 + "," + (ya + yb)/2 + ")");
 
-  t.text(
-    format(c - d)
-    );
-
-  if((c) >= 1000) yTextGA.selectAll("rect").attr("width","47.5px")  
-  if((c) < 1000) yTextGA.selectAll("rect").attr("width","40px")  
+  if((c) >= 1000) yTextGA.select("rect").attr("width","70px")  
+  if((c) < 1000) yTextGA.select("rect").attr("width","65px")  
 
   xDiffText.attr("transform", "translate(" +  (xa + xb)/2 + "," + (y(0) - 10) + ")");
 
@@ -471,17 +503,22 @@ var xa = x(a),
 
   xGapLine.attr("x1", xa - xb + 3);
 
-  yTextGAText.text(format(c));
-  yTextGBText.text(format(d));
-  xTextGAText.text(d3.round(a,0));
-  xTextGBText.text(d3.round(b,0));
+  t.text( format(d - c) + " gal" );
+  yTextGAText.text(format(c) + " gal");
+  yTextGBText.text(format(d) + " gal");
+  xTextGAText.text(d3.round(a,0) + " mpg");
+  xTextGBText.text(d3.round(b,0) + " mpg");
 
   yTextGA.attr("transform","translate(" + 0 + "," + ya + ")");
   yTextGB.attr("transform","translate(" + 0 + "," + yb + ")");
   xTextGA.attr("transform","translate(" + xa + "," + y(0) + ")");
   xTextGB.attr("transform","translate(" + xb + "," + y(0) + ")");
 
+  canA.update(c);
+  canB.update(d);
 
 }
+
+
 
 

@@ -11,6 +11,9 @@
 
 </head>
 
+
+
+
 <!-- ============== BODY =================== -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -31,15 +34,16 @@ MathJax.Hub.Config({
             <li>Trading an S.U.V. that gets 15 mpg for a lighter one that gets 20 mpg.</li>
         </ol>
 
-    Of course, <b>a</b> <em>seems</em> like the right answer. It's a 10 mpg increase, while <b>b</b> only bumps up the gas mileage by 5 mpg. But let's check the math. The average American drives about 13,500 miles per year. How many gallons per year will the average American save with each swap?</p>
+    Of course, <b>a</b> <em>seems</em> like the right answer, but let's check the math. According to the <a href="http://www.fhwa.dot.gov/ohim/onh00/bar8.htm">Federal Highway Administration</a>, the average American drives about 13,500 miles per year. How many gallons per year will the average American save with each swap?</p>
 
-        \[  \begin{aligned}
+        \[  \begin{aligned}f
           \textbf{a.} & \frac{13,500 \, mi.}{28 \, mpg} - \frac{13,500 \, mi.}{38 \, mpg} = 482 \, gal. - 355 \, gal. = 127 \, gal.\\
           \textbf{b.} & \frac{13,500 \, mi.}{15 \, mpg} - \frac{13,500 \, mi.}{20 \, mpg} = 900 \, gal. - 675 \, gal.= 225 \, gal.\\
           \end{aligned}
         \]    
 
-    <b>b</b> saves nearly twice as much gas! It turns out that an extra mile per gallon makes less of a difference to efficient cars than to inefficient ones.  The chart below shows how many gallons of gas per year an average driver would save by switching to a car that gets 10 more mpg. Drag the slider to control how many mpg the driver's current car gets. 
+    <b>b</b> saves nearly twice as much gas! If you call this wrong, you're not alone. Experiments by Richard Larrick and Jack Soll, professors at Duke's Fuqua School of Management, indicate that "there is a systematic misperception in judging fuel efficiency when it is expressed as miles per gallon." Namely, most people believe fuel usage declines <em>linearly</em> as a vehicle's miles per gallon rises, when the actual relationship is <em>curved</em>: 
+    an extra mile per gallon makes less of a difference on the consumption of efficient vehicle than to an inefficient one.  
 
     <div id="lineChart"></div>
     <div id="slider"></div>
@@ -77,6 +81,107 @@ MathJax.Hub.Config({
     <div id="slider2"></div>
 
 
+<!-- svgs -->
+  
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   id="svg2">
+  <g
+     id="gasCanB">
+    <path
+       d="m 57.7,20.996 c -1.078,-1.18 -3.268,-2.145 -4.867,-2.145 h -6.808 c -2.34,0 -2.923,0.279 -2.923,-1.923 0,-1.059 -1.008,-2.777 -2.218,-3.823 L 30.673,4.291 C 29.464,3.247 27.165,2.392 25.566,2.392 H 2.907 C 1.308,2.392 0,3.699 0,5.298 V 97.093 C 0,98.692 1.308,100 2.907,100 h 64.076 c 1.599,0 2.906,-1.308 2.906,-2.907 V 37.226 c 0,-1.599 -0.884,-3.873 -1.961,-5.053 L 57.7,20.996 z M 12.719,7.969 h 11.374 c 1.597,0 3.882,0.871 5.077,1.933 l 7.792,6.941 c 1.194,1.063 0.864,1.933 -0.735,1.933 H 24.853 c -1.6,0 -3.883,-0.87 -5.079,-1.933 L 11.982,9.902 C 10.788,8.839 11.119,7.969 12.719,7.969 z M 54.73,78.524 c 0.801,0.802 0.801,2.099 0,2.9 -0.4,0.401 -0.925,0.601 -1.449,0.601 -0.525,0 -1.051,-0.2 -1.451,-0.601 L 35.508,65.102 19.187,81.424 c -0.401,0.401 -0.925,0.601 -1.45,0.601 -0.525,0 -1.049,-0.2 -1.449,-0.601 -0.803,-0.801 -0.803,-2.098 0,-2.9 L 32.609,62.203 16.288,45.88 c -0.803,-0.801 -0.803,-2.099 0,-2.901 0.8,-0.8 2.098,-0.8 2.899,0 L 35.508,59.302 51.83,42.979 c 0.801,-0.8 2.099,-0.8 2.9,0 0.801,0.802 0.801,2.1 0,2.901 L 38.409,62.203 54.73,78.524 z"
+       id="path60" />
+  </g>
+</svg>
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   id="svg2">
+  <g
+     id="gasCanA">
+    <rect
+       width="1.11"
+       height="6.2249999"
+       x="66.156998"
+       y="21.117001"
+       transform="matrix(-0.6703,-0.742,0.742,-0.6703,93.4529,89.9746)"
+       id="rect44"
+       style="fill:#000000" />
+    <rect
+       width="1.112"
+       height="6.2270002"
+       x="67.473999"
+       y="22.573999"
+       transform="matrix(-0.6695,-0.7428,0.7428,-0.6695,94.4922,93.42)"
+       id="rect46"
+       style="fill:#000000" />
+    <rect
+       width="1.112"
+       height="6.2280002"
+       x="68.790001"
+       y="24.033001"
+       transform="matrix(0.6695,0.7428,-0.7428,0.6695,43.0866,-42.5395)"
+       id="rect48"
+       style="fill:#000000" />
+    <rect
+       width="1.112"
+       height="6.2259998"
+       x="64.839996"
+       y="19.656"
+       transform="matrix(-0.6709,-0.7416,0.7416,-0.6709,92.3838,86.5402)"
+       id="rect50"
+       style="fill:#000000" />
+    <rect
+       width="1.1109999"
+       height="6.2259998"
+       x="63.525002"
+       y="18.195999"
+       transform="matrix(-0.6697,-0.7426,0.7426,-0.6697,91.1699,83.1683)"
+       id="rect52"
+       style="fill:#000000" />
+    <path
+       d="m 59.508,20.887 4.624,-4.168 -0.689,-0.765 c -0.318,-0.354 -0.917,-0.331 -1.34,0.048 l -3.099,2.796 c -0.423,0.378 -0.504,0.971 -0.186,1.324 l 0.69,0.765 z"
+       id="path54"
+       style="fill:#000000" />
+    <rect
+       width="1.112"
+       height="6.223"
+       x="62.206001"
+       y="16.739"
+       transform="matrix(-0.67,-0.7424,0.7424,-0.67,90.0734,79.7438)"
+       id="rect56"
+       style="fill:#000000" />
+    <path
+       d="m 72.603,26.109 -4.624,4.171 0.701,0.777 c 0.317,0.352 0.919,0.33 1.337,-0.048 l 3.101,-2.795 c 0.421,-0.379 0.503,-0.974 0.186,-1.327 l -0.701,-0.778 z"
+       id="path58"
+       style="fill:#000000" />
+    <path
+       d="m 57.7,20.996 c -1.078,-1.18 -3.268,-2.145 -4.867,-2.145 h -6.808 c -2.34,0 -2.923,0.279 -2.923,-1.923 0,-1.059 -1.008,-2.777 -2.218,-3.823 L 30.673,4.291 C 29.464,3.247 27.165,2.392 25.566,2.392 H 2.907 C 1.308,2.392 0,3.699 0,5.298 V 97.093 C 0,98.692 1.308,100 2.907,100 h 64.076 c 1.599,0 2.906,-1.308 2.906,-2.907 V 37.226 c 0,-1.599 -0.884,-3.873 -1.961,-5.053 L 57.7,20.996 z M 12.719,7.969 h 11.374 c 1.597,0 3.882,0.871 5.077,1.933 l 7.792,6.941 c 1.194,1.063 0.864,1.933 -0.735,1.933 H 24.853 c -1.6,0 -3.883,-0.87 -5.079,-1.933 L 11.982,9.902 C 10.788,8.839 11.119,7.969 12.719,7.969 z M 54.73,78.524 c 0.801,0.802 0.801,2.099 0,2.9 -0.4,0.401 -0.925,0.601 -1.449,0.601 -0.525,0 -1.051,-0.2 -1.451,-0.601 L 35.508,65.102 19.187,81.424 c -0.401,0.401 -0.925,0.601 -1.45,0.601 -0.525,0 -1.049,-0.2 -1.449,-0.601 -0.803,-0.801 -0.803,-2.098 0,-2.9 L 32.609,62.203 16.288,45.88 c -0.803,-0.801 -0.803,-2.099 0,-2.901 0.8,-0.8 2.098,-0.8 2.899,0 L 35.508,59.302 51.83,42.979 c 0.801,-0.8 2.099,-0.8 2.9,0 0.801,0.802 0.801,2.1 0,2.901 L 38.409,62.203 54.73,78.524 z"
+       id="path60"
+       style="fill:#000000" />
+    <path
+       d="M 67.126,15.327 C 66.895,15.072 66.574,14.984 66.41,15.132 l -1.208,1.09 c -0.164,0.148 -0.11,0.478 0.122,0.732 l 7.16,7.923 c 0.232,0.255 0.552,0.342 0.715,0.193 l 1.211,-1.091 c 0.163,-0.147 0.106,-0.476 -0.124,-0.73 l -7.16,-7.922 z"
+       id="path62"
+       style="fill:#000000" />
+    <path
+       d="M 97.607,7.582 V 4.935 c 0,-0.4 -0.326,-0.727 -0.727,-0.727 h -1.896 v 4.101 h 1.896 c 0.401,0 0.727,-0.327 0.727,-0.727 z"
+       id="path64"
+       style="fill:#000000" />
+    <path
+       d="M 83.324,4.703 70.295,16.784 c -0.293,0.271 -0.31,0.733 -0.038,1.026 l 1.802,1.942 c 0.271,0.292 0.732,0.31 1.025,0.038 L 84.933,8.803 C 85.224,8.531 85.79,8.309 86.192,8.309 h 7.5 V 4.208 h -9.109 c -0.401,0 -0.967,0.222 -1.259,0.495 z"
+       id="path66"
+       style="fill:#000000" />
+    <path
+       d="m 98.235,11.305 c -0.272,-0.728 -0.245,-1.19 -0.359,-1.19 -0.115,0 -0.077,0.396 -0.36,1.093 -0.533,1.319 -1.763,3.276 -1.763,4.98 0,1.587 0.949,2.872 2.123,2.872 1.172,0 2.124,-1.285 2.124,-2.872 0,-1.708 -1.265,-3.542 -1.765,-4.883 z"
+       id="path68"
+       style="fill:#000000" />
+  </g>
+</svg>
+
   </body>
 
 <!-- ============== LIBRARIES =================== -->
@@ -94,5 +199,7 @@ MathJax.Hub.Config({
     <script src="scripts/linechart2.js"></script>
 
 
+
+<
 
 </html>
