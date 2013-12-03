@@ -9,7 +9,7 @@ var data = d3.range(8,m).map(function(d,i){
 
 var format = d3.format(".3r");
 
-var margin = {top: 47.5, right: 80, bottom: 70, left: 90},
+var margin = {top: 47.5, right: 80, bottom: 70, left: 60},
     width = 620 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -64,22 +64,20 @@ function gasCan(letter, xCo, h, val){
 
   var overlay = gasGroup.append("g").call(d3.sticker("#gasCanB"));
 
-  // back.selectAll("path").style({
-  //   fill: ( letter == "A" ? "#2ecc71" : "#3498db"),
-  // });
-
   overlay.attr({
-    // fill: "#e74c3c",
     fill: ( letter == "A" ? "#2ecc71" : "#3498db"),
     "clip-path": "url(#clip" + letter + ")"
   });
 
-  back.append("g")
+  overlay.append("g")
     .attr("transform", "translate(" + [0,h] + ")")
     .append("text")
-    .text( (letter=="A"? "current" : "replacement" ) )
-    .attr("dy","1.25em")
-    .style("text-anchor","start")
+    .text( (letter=="A"? "current" : "new" ) )
+    .attr("dy","-.25em")
+    .attr("dx","2.1em")
+    .attr("font-size","16px")
+    .style("text-anchor","middle")
+    .style("fill", "white")
 
   this.update = function(val){
     rec
@@ -117,10 +115,10 @@ svg.append("g")
     .call(yAxis)
   .append("text")
     .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", "-5em")
+    .attr("y", -20)
+    // .attr("dy", "-5em")
     .style("text-anchor", "end")
-    .text("gallons/year");
+    .text("gal/year");
 
 
 svg.append("path")
@@ -159,7 +157,7 @@ svg.append("g")
   .append("xhtml:div")
     .style("width", 300 + "px")
     // .attr("height", 200)
-    .html("<div>Drag the slider to change the mpg of your <span id='current'>current</span> vehicle. Notice how many gallons you save with a <span id='replacement'>replacement</span> that gets 10 more mpg.</div>");
+    .html("<div>Drag the slider to change the mpg of your <span id='current'>current</span> vehicle. Notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets 10 more mpg.</div>");
 
 
 var chart = {};
@@ -172,7 +170,7 @@ circle.on("mouseover", function(d){
      .duration(100)      
      .style("opacity", .9);   
 
- div .html("mpg:  "   + d3.round(d.x)  + "<br/>" + "gallons/year: " + format(d.y))  
+ div .html("mpg:  "   + d3.round(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
      .style("left", (d3.event.pageX + 10) + "px")     
      .style("top", (d3.event.pageY - 65) + "px");
 
