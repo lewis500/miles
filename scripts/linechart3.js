@@ -42,13 +42,13 @@ var svg = d3.select("#lineChart2").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-function gasCan(absOrPercent, xCo, h, val, currentornew){
+function gasCan(absOrPercent, xCo, h, val, currentornew, yCo){
 
   var y = d3.scale.linear().domain([0,1690]).range([h, 0]);
 
   var gasGroup = svg.append("g")
     .attr({
-      transform: "translate(" + xCo + "," + 200 + ")",
+      transform: "translate(" + xCo + "," + yCo + ")",
       class: "g-gas"
     });
 
@@ -205,9 +205,9 @@ var a =5,
   ya = y(c),
   yb = y(d);
 
-var canCurrent = new gasCan("percent", 250, 100, c, "current");
+var canCurrent = new gasCan("percent", 425, 100, c, "current", 90);
 
-var canNew = new gasCan("percent", 375, 100, d, "new");
+var canNew = new gasCan("percent", 425, 100, d, "new", 225);
 //line to y axis
 var diffLine = diffGroup.append("line")
     .attr({
