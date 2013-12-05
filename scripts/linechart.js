@@ -118,7 +118,7 @@ svg.append("g")
   .append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", -20)
-    // .attr("dy", "-5em")
+    .attr("dx", "1em")
     .style("text-anchor", "end")
     .text("gal/year");
 
