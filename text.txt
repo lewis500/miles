@@ -1,26 +1,64 @@
-Suppose you're trading in your car for one with better gas mileage. Which of these two swaps would save more gallons of gasoline?
+ <div id="absolute">
+    Which of these two trades would save more gas?
+        <ol type="a">
+            <li>Trading a sedan that gets 28 mpg (miles per gallon) for a compact car that gets 38 mpg.</li>
+            <li>Trading an S.U.V. that gets 15 mpg for a lighter one that gets 20 mpg.</li>
+        </ol>
 
-a) Trading a sedan that gets 25 miles per gallon for a hybrid that gets 50 miles per gallon.
+    Of course, <b>a</b> <em>seems</em> like the right answer, but let's check the math. <a href="http://www.fhwa.dot.gov/ohim/onh00/bar8.htm">The average American</a> drives about 13,500 miles per year. How many gallons per year will the average American save with each swap?</p>
 
-b) Trading an old S.U.V. that gets 12 miles per gallon for a newer one that gets 16 miles per gallon.
+        \[  \begin{aligned}
+          \textbf{a.} & \frac{13,500 \, mi.}{28 \, mpg} - \frac{13,500 \, mi.}{38 \, mpg} = 482 \, gal. - 355 \, gal. = 127 \, gal.\\
+          \textbf{b.} & \frac{13,500 \, mi.}{15 \, mpg} - \frac{13,500 \, mi.}{20 \, mpg} = 900 \, gal. - 675 \, gal.= 225 \, gal.\\
+          \end{aligned}
+        \]    
 
-No matter how you look at it, (a) seems like the right answer. In absolute terms, (a)'s 25 mile per gallon increase is over six times larger than (b)'s 4 mpg bump. In percentage terms, (a) represents a 100% increase in miles per gallon, while (b) gets you just 25% more. Surprisingly enough, though, (b) is the correct answer. 
+    <b>b</b> saves nearly twice as much gas! If you called this wrong, you're not alone. A 2008 <a href="http://www.sciencemag.org/cgi/content/full/320/5883/1593?ijkey=3pScQm7pQBzqs&keytype=ref&siteid=sci">study</a> published in Science by <a href='http://sites.duke.edu/larrick/'>Richard Larrick</a> and <a href="http://www.fuqua.duke.edu/faculty_research/faculty_directory/soll/">Jack Soll</a>, professors at Duke University's Fuqua School of Management, suggests "there is a systematic misperception in judging fuel efficiency when it is expressed as miles per gallon."  Namely, most people think gas usage falls <em>linearly</em> as mpg rises, when the actual relationship is <em>curved</em>: an extra mpg makes less of a difference to the consumption of efficient vehicles than to inefficient ones. They call this effect "<a href="http://www.mpgillusion.com/">The MPG Illusion</a>."
 
-Let's do the math. The average American drives about 13,500 miles per year.
+  </div>
 
-latex calculations.
+  INSERT LINECHART1.html HERE
+  
+  <div id="percent" >
 
-(a) really does reduce gasoline consumption by 50%, but that's 50% of a relatively small number. In the (b) swap, you start out using so many gallons that even a small percentage increase makes a big difference.
+    You might say: "That's because going from 15 to 20 is a bigger <em>percentage</em> jump than going from 28 to 38!" But the misperception persists even when you compare proportions. The chart below shows the savings from a 50% boost in mpg. The higher the mpg, the less gas a 50% boost saves.
 
-The problem is that miles per gallon is a fraction with miles in the numerator and gallons in the denominator. This arrangement is convenient for answering questions in which the number of gallons used is fixed. For example, if the tank holds 10 gallons, and you know it gets 25 miles per gallon, then it's easy to figure out that the car can go 250 miles without stopping for gas. But chances are that it's your number of miles, not your number of gallons, that's fixed. You're more interested in asking, "How many gallons will this car need for all my driving?" For this question, it would help to put gallons in the denominator. 
+  </div>
 
-According to Richard Larrick and Jack Soll, professors at Duke's Fuqua School of Business, people tend to believe that fuel consumption falls at a steady rate as miles per gallon increases. 
+  INSERT LINECHART2.html HERE
 
-Instead, Larrick and Soll reccommend an alternative metric: gallons per 100 miles. 
+  <h3>Gallons per Hundred Miles</h3>
 
+  The problem is that mpg is a fraction with miles in the numerator and gallons in the denominator. It's convenient for questions with answers expressed in miles, such as: "If my car has 5 gallons left in the tank, and it gets 30 miles per gallon, how many miles can I go without stopping for gas?"
 
+  \[  
+    \frac{30 \, mi.}{1 \, gal.} * 3 \, gal. = 150 \, mi.
+  \] 
 
+  More often, however, you want answers expressed in gallons. Gallons are what matter to your budget and the environment (burning 100 gallons <a href="http://www.eia.gov/tools/faqs/faq.cfm?id=307&t=11">emits one ton</a> of CO2). Therefore, it makes sense to put gallons in the numerator. A direct way would be to flip mpg and use gallons per mile (gpm):
 
+  \[  
+    \frac{1}{25 \, mi./gal.} = \frac{.04 \, gal. }{1\,mi.} = .04 \, gpm
+  \]   
 
+  But the small numbers are confusing. A better way is to use gallons per hundred miles (gphm):
 
+  \[  
+    \frac{.04 \, gal.}{1 mi.} * \frac{100 \,mi.}{100\,mi.} = \frac{4 \, gal. }{100 \,mi.} = 4 \, gphm
+  \] 
 
+  When you put gallons in the numerator, comparing fuel usage is easy. The chart below shows how a 1 gphm drop <i>always</i> saves the same amount of gasoline.<br>
+
+  INSERT LINECHART3.html HERE
+
+  <h3>Policy Implications</h3>
+
+  Does all this mean it's alright to buy a new gas guzzler as long as it's even <i>slightly</i> more efficient than your old one? Just the opposite. If you're upgrading from 14 to 18 mpg, you're still in the range where each mpg saves lots of gas, and you can cut your usage 28% by reaching for a 25 mpg sedan instead. That's why Larrick and Soll argue, "removing the most inefficient vehicles is where policy and popular opinion should be focused." In other words, it's more important to nudge drivers from gas guzzlers to normal cars than from normal cars to hybrids.<br>
+
+  Fortunately, the government has already taken steps to steer the conversation. In the 2009 best-seller <i>Nudge</i>, U. Chicago economists Cass Sunstein and Richard Thaler discussed "The MPG Illusion" at length, and when President Obama appointed Sunstein to run the Office of Information and Regulatory Affairs, Sunstein worked to include "gallons per 100 miles" on vehicle showroom stickers that came out this year. 
+
+  <br>
+  <a href="http://www.fueleconomy.gov/feg/label/learn-more-gasoline-label.shtml"><img src="styles/gaslabel.jpg" alt="" width="500px"></a>
+  <br>
+
+  As Nobel Laureate <a href="http://books.google.com/books?id=ZuKTvERuPG8C&lpg=PP1&dq=thinking%2C%20fast%20and%20slow&pg=PA373#v=onepage&q=gallons&f=false">Daniel Kahneman noted</a>, "The five-year interval between the publication of 'The MPG Illusion' and the implementation of a partial correction is probably a speed record for a significant application of psychological science to public policy."<br>
