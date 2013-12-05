@@ -27,40 +27,9 @@ MathJax.Hub.Config({
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <body>
 
-  <div id="absolute">
-    Which of these two trades would save more gas?
-        <ol type="a">
-            <li>Trading a sedan that gets 28 mpg for a compact car that gets 38 mpg.</li>
-            <li>Trading an S.U.V. that gets 15 mpg for a lighter one that gets 20 mpg.</li>
-        </ol>
-
-    Of course, <b>a</b> <em>seems</em> like the right answer, but let's check the math. According to the <a href="http://www.fhwa.dot.gov/ohim/onh00/bar8.htm">Federal Highway Administration</a>, the average American drives about 13,500 miles per year. How many gallons per year will the average American save with each swap?</p>
-
-        \[  \begin{aligned}
-          \textbf{a.} & \frac{13,500 \, mi.}{28 \, mpg} - \frac{13,500 \, mi.}{38 \, mpg} = 482 \, gal. - 355 \, gal. = 127 \, gal.\\
-          \textbf{b.} & \frac{13,500 \, mi.}{15 \, mpg} - \frac{13,500 \, mi.}{20 \, mpg} = 900 \, gal. - 675 \, gal.= 225 \, gal.\\
-          \end{aligned}
-        \]    
-
-    <b>b</b> saves nearly twice as much gas! If you call this wrong, you're not alone. A <a href="http://www.sciencemag.org/cgi/content/full/320/5883/1593?ijkey=3pScQm7pQBzqs&keytype=ref&siteid=sci">study</a> published in Science by <a href='http://sites.duke.edu/larrick/'>Richard Larrick</a> and <a href="http://www.fuqua.duke.edu/faculty_research/faculty_directory/soll/">Jack Soll</a>, professors at Duke's Fuqua School of Management, indicate that "there is a systematic misperception in judging fuel efficiency when it is expressed as miles per gallon." Namely, most people believe fuel usage declines <em>linearly</em> as a vehicle's miles per gallon rises, when the actual relationship is <em>curved</em>: 
-    an extra mile per gallon makes less of a difference on the consumption of efficient vehicle than to an inefficient one.  
 
     <div id="lineChart"></div>
     <div id="slider"></div>
-
-  </div>
-
-  <div id="percent" >
-
-    Now, you might think: "That's because going from 15 to 20 is a bigger <em>percentage</em> jump than going from 28 to 38!" But the misperception persists, even when you think proportionately. The chart below is the same as the first one, except instead of of a constant 10 mpg increase it shows a constant 50% increase. The more efficient the vehicle, the less a 50% increase in mpg makes in gas consumption.
-  </div>
-
-    <div id="lineChart2"></div>
-    <div id="slider2"></div>
-
-  <h2>Policy Implications</h2>
-
-  ...DISCUSS CAFE STANDARDS HERE. QUOTES FROM LARRICK AND KROLL.
 
 <!-- svgs -->
 
@@ -178,9 +147,10 @@ MathJax.Hub.Config({
 
 <!-- ============== SCRIPTS =================== -->
 
-
     <script src="scripts/linechart.js"></script>
-    <script src="scripts/linechart2.js"></script>
 
+
+
+<
 
 </html>

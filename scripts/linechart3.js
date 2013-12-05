@@ -1,15 +1,16 @@
 (function(){
 
-var m = 55;
-
-var data = d3.range(8,m).map(function(d,i){
+var data = d3.range(40/6,41).map(function(d,i){
+  var val = 8/40 * d;
   return {
-    y: 13500/d,
-    x: d
+    y: 13500*val/100,
+    x: val
   }
 });
 
 var format = d3.format(".3r");
+var formatB = d3.format(".2r");
+
 
 var margin = {top: 47.5, right: 80, bottom: 70, left: 60},
     width = 620 - margin.left - margin.right,
@@ -17,11 +18,9 @@ var margin = {top: 47.5, right: 80, bottom: 70, left: 60},
 
 var x = d3.scale.linear()
     .range([0, width])
-    // .clamp(true);
 
 var y = d3.scale.linear()
     .range([height, 0])
-    // .clamp(true);
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -37,7 +36,7 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.x); })
     .y(function(d) { return y(d.y); });
 
-var svg = d3.select("#lineChart").append("svg")
+var svg = d3.select("#lineChart2").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -49,7 +48,7 @@ function gasCan(absOrPercent, xCo, h, val, currentornew){
 
   var gasGroup = svg.append("g")
     .attr({
-      transform: "translate(" + xCo + "," + 150 + ")",
+      transform: "translate(" + xCo + "," + 200 + ")",
       class: "g-gas"
     });
 
@@ -97,8 +96,8 @@ var background = svg.append("rect")
     opacity: 0
   });
 
-x.domain([0,m]);
-y.domain([0,1800]);
+x.domain([0, 8]);
+y.domain([0,1100]);
 
 svg.append("g")
     .attr("class", "x axis")
@@ -109,7 +108,7 @@ svg.append("g")
   .attr("x", width - 20)
   .attr("dy", "2.5em")
   .style("text-anchor", "end")
-  .text("mpg")
+  .text("gphm")
   .style("font-size","14px");
 
 svg.append("g")
@@ -118,7 +117,7 @@ svg.append("g")
   .append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", -20)
-    // .attr("dy", "-5em")
+    .attr("x", "1.75em")
     .style("text-anchor", "end")
     .text("gal/year");
 
@@ -152,17 +151,14 @@ var div = d3.select("body").append("div")
     .style("opacity", 0);
 
 svg.append("g")
-  .attr("transform","translate(" + [width - 300, 15] + ")" )
+  .attr("transform","translate(" + [100, -27.5] + ")" )
   .append("foreignObject")
     .attr("width", 300)
     .attr("height", 200)
   .append("xhtml:div")
     .style("width", 300 + "px")
     // .attr("height", 200)
-    .html("<div>Drag the slider to change the mpg of your <span id='current'>current</span> vehicle. Notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets 10 more mpg.</div>");
-
-
-var chart = {};
+    .html("<div>This time, notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets <b>1</b> less gphm (gallons per hundred miles) than your <span id='current'>current</span> vehicle.</div>");
 
 circle.on("mouseover", function(d){
 
@@ -172,7 +168,7 @@ circle.on("mouseover", function(d){
      .duration(100)      
      .style("opacity", .9);   
 
- div .html("mpg:  "   + d3.round(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
+ div .html("gphm:  "   + formatB(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
      .style("left", (d3.event.pageX + 10) + "px")     
      .style("top", (d3.event.pageY - 65) + "px");
 
@@ -186,33 +182,32 @@ circle.on("mouseover", function(d){
 
 })
 
-var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(m-10).min(8).step(.5).value(15);
+var sliderCall = d3.slider().on("slide", slide).axis( d3.svg.axis().orient("top").ticks(0) ).max(6.8).min(2.5).step(.1).value(5);
 
-d3.select("#slider")
+d3.select("#slider2")
     .style({
-      width: width - x(18) + "px",
+      "width": width - x(2.5) + - x(1.2) + "px",
       "margin-top": -45 + "px",
-      "margin-left": margin.left + x(8) + "px",
+      "margin-left": margin.left + x(2.5) + "px",
       "margin-bottom": 30 + "px"
     });
 
-d3.select('#slider').call(sliderCall);
+d3.select('#slider2').call(sliderCall);
 
 var diffGroup = svg.append("g").attr("class","diffGroup");
 
-var a = 15,
-  b = a + 10,
-  c = 13500/a,
-  d = 13500/b,
+var a =5,
+  b = a - 1,
+  c = 13500*a/100,
+  d = 13500*b/100,
   xa = x(a),
   xb = x(b),
   ya = y(c),
   yb = y(d);
 
-var canCurrent = new gasCan("abs", 250, 100, c, "current");
+var canCurrent = new gasCan("percent", 250, 100, c, "current");
 
-var canNew = new gasCan("abs", 375, 100, d, "new");
-
+var canNew = new gasCan("percent", 375, 100, d, "new");
 //line to y axis
 var diffLine = diffGroup.append("line")
     .attr({
@@ -277,7 +272,7 @@ yTextGA.append("rect")
   })
 
 var yTextGAText = yTextGA.append("text")
-  .text(format(13500/15) + " gal")
+  .text(format(a) + " gal")
   .attr({
     x: 12.5,
     y: -12.5
@@ -297,7 +292,7 @@ yTextGB.append("rect")
   });
 
 var yTextGBText = yTextGB.append("text")
-  .text(format(13500/25)  + " gal")
+  .text(format(b)  + " gal")
   .attr({
     x: 12.5,
     y: 22.5
@@ -306,19 +301,19 @@ var yTextGBText = yTextGB.append("text")
 //========
 var xTextGA = diffGroup.append("g")
   .attr("class","value-label")
-  .attr("transform","translate(" +  xa  + "," + y(0) + ")");
+  .attr("transform","translate(" +  xb  + "," + y(0) + ")");
 
 xTextGA.append("rect")
   .attr({
-    x: -65,
+    x: -77.5,
     y: -30,
     rx: 3,
-    width: 60,
+    width: 72.5,
     height: 25,
   })
 
 var xTextGAText = xTextGA.append("text")
-  .text(d3.round(a) + "mpg")
+  .text(formatB(b) + " gphm")
   .attr({
     x: -12.5,
     y: -12.5
@@ -327,19 +322,19 @@ var xTextGAText = xTextGA.append("text")
 
 var xTextGB = diffGroup.append("g")
   .attr("class","value-label")
-  .attr("transform","translate(" +  xb  + "," + y(0) + ")");
+  .attr("transform","translate(" +  xa  + "," + y(0) + ")");
 
 xTextGB.append("rect")
   .attr({
-    x: 5,
+    x: 7.5,
     y: -30,
     rx: 3,
-    width: 60,
+    width: 70,
     height: 25,
   });
 
 var xTextGBText = xTextGB.append("text")
-  .text(d3.round(b)  + " mpg")
+  .text(formatB(a)  + " gphm")
   .attr({
     x: 12.5,
     y: -12.5
@@ -375,19 +370,17 @@ var xDiffText = diffGroup.append("g")
 
 xDiffText.append("rect")
   .attr({
-    width: 60,
+    width: 65,
     height: 25,
     y: -32.5,
-    x: -25,
+    x: -32.5,
     rx: 3
   })
 
-xDiffText
-  .append("text")
-    .text("10 mpg")
-    .attr("dx","-20px")
+var xt = xDiffText.append("text")
+    .text(d3.round(b-a) + " gphm")
+    .attr("dx","-27.5px")
     .attr("dy","-15px");
-
 
 //====
 
@@ -421,8 +414,8 @@ var xArrowGroup = diffGroup
 var xGapLine = xArrowGroup
   .append("line")
     .attr({
-      x2: -3,
-      x1: xa - xb + 3,
+      x2: 3,
+      x1: xa - xb-3,
       y1: 0,
       y2: 0,
       class: "neutral"
@@ -431,19 +424,19 @@ var xGapLine = xArrowGroup
 xArrowGroup
   .append("path")
     .attr("d","M0,-3 L-5,-10 M5,-10 L0,-3")
-    .attr("transform","rotate(-90)")
+    .attr("transform","rotate(90)")
     .attr("class", "arrowHead")
 //====
 
 function slide(event, a){
 
-  var b = a + 10,
-    c = 13500/a,
-    d = 13500/b,
-    xa = x(a),
-    xb = x(b),
-    ya = y(c),
-    yb = y(d);
+var b = a -1,
+  c = 13500*a/100,
+  d = 13500*b/100,
+  xa = x(a),
+  xb = x(b),
+  ya = y(c),
+  yb = y(d);
 
   var xa = x(a),
     xb = x(b),
@@ -498,25 +491,25 @@ function slide(event, a){
 
   xArrowGroup.attr("transform", "translate(" + xb + "," + (y(0)-7.5) + ")" );
 
-  xGapLine.attr("x1", xa - xb + 3);
+  xGapLine.attr("x1", xa - xb - 3);
 
-  t.text( format(c) - format(d) + " gal saved" );
   yTextGAText.text(format(c) + " gal");
   yTextGBText.text(format(d) + " gal");
-  xTextGAText.text(d3.round(a,0) + " mpg");
-  xTextGBText.text(d3.round(b,0) + " mpg");
+  xTextGAText.text(formatB(b) + " gphm");
+  xTextGBText.text(formatB(a) + " gphm");
 
   yTextGA.attr("transform","translate(" + 0 + "," + ya + ")");
   yTextGB.attr("transform","translate(" + 0 + "," + yb + ")");
-  xTextGA.attr("transform","translate(" + xa + "," + y(0) + ")");
-  xTextGB.attr("transform","translate(" + xb + "," + y(0) + ")");
+  xTextGA.attr("transform","translate(" + xb + "," + y(0) + ")");
+  xTextGB.attr("transform","translate(" + xa + "," + y(0) + ")");
+
+  t.text(format(c) - format(d) + " gal saved" );
+  xt.text(d3.round(b-a) + " gphm")
 
   canCurrent.update(c);
   canNew.update(d);
 
 }
 
-})()
 
-
-
+})();

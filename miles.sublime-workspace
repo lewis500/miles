@@ -95,6 +95,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "styles/style.css",
+			"settings":
+			{
+				"buffer_size": 1461,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/linechart.js",
+			"settings":
+			{
+				"buffer_size": 10613,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -187,11 +203,14 @@
 	},
 	"file_history":
 	[
+		"/home/lewis/Documents/github/miles/scripts/linechart.js",
 		"/home/lewis/Documents/github/miles/todo.txt",
+		"/home/lewis/Documents/github/miles/styles/gas-overlay.svg",
+		"/home/lewis/Documents/github/miles/linechart.html",
+		"/home/lewis/Documents/github/miles/styles/gas.svg",
+		"/home/lewis/Documents/github/quant-econ/programs/web_graph_data.txt",
 		"/home/lewis/Documents/github/miles/text.txt",
 		"/home/lewis/Documents/github/miles/scripts/linechart2.js",
-		"/home/lewis/Documents/github/miles/linechart.html",
-		"/home/lewis/Documents/github/miles/scripts/linechart.js",
 		"/home/lewis/Documents/github/miles/styles/style.css",
 		"/home/lewis/Documents/github/miles/barchart.html",
 		"/home/lewis/Documents/github/miles/scripts/barchart.js",
@@ -311,10 +330,7 @@
 		"/home/lewis/Documents/github/bart/bayareaTOPO.json",
 		"/home/lewis/Documents/github/sfpark/scripts/parseit.js",
 		"/home/lewis/Documents/github/sfpark/data/locs.json",
-		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser_csv2.js",
-		"/home/lewis/Documents/github/sfpark/data/example_request.json",
-		"/home/lewis/Documents/github/sfpark/scripts/location.parser.js",
-		"/home/lewis/Documents/github/sfpark/data/locs_with_keys.json"
+		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser_csv2.js"
 	],
 	"find":
 	{
@@ -332,6 +348,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gallons",
+			"/year",
+			"gal/year",
+			"replacement",
+			"stroke-width",
+			"array",
+			"dash",
+			"black",
+			"height",
+			"slide",
+			"width",
+			"250",
+			"125",
+			"200",
+			"black",
+			"attr",
+			"80",
+			"400",
+			"50",
+			"300",
+			"sticker",
+			"ytextga",
+			"60",
+			"500",
 			",1",
 			"+ 10",
 			"slider2",
@@ -435,31 +475,7 @@
 			"this.choose",
 			"tollhim",
 			"tollOn",
-			"tollon",
-			"tc =",
-			"prices",
-			"return",
-			"getends",
-			"this",
-			"classes",
-			"redraw",
-			"ig",
-			"timeLength",
-			"tolls",
-			"new Toll",
-			"tollchart",
-			"Toll",
-			"price",
-			"priceSched",
-			"priceSchedprice",
-			"priceSched",
-			"tollchart",
-			"tc =",
-			"ddp",
-			"choose",
-			"label",
-			"this.choose",
-			"choice"
+			"tollon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -467,6 +483,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"new",
 			"mpg",
 			"m.p.g.",
 			"mpg",
@@ -542,11 +559,78 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "styles/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1195,
+								1195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 801.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "scripts/linechart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10569,
+								10569
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7735.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -561,11 +645,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -591,24 +682,28 @@
 		"selected_items":
 		[
 			[
-				"text.txt",
-				"text.txt"
-			],
-			[
 				"todo",
 				"todo.txt"
 			],
 			[
-				"linechart.js",
+				"linecha",
 				"scripts/linechart.js"
 			],
 			[
 				"linechart",
-				"linechart.html"
+				"scripts/linechart.js"
 			],
 			[
 				"style.css",
 				"styles/style.css"
+			],
+			[
+				"text.txt",
+				"text.txt"
+			],
+			[
+				"linechart.js",
+				"scripts/linechart.js"
 			],
 			[
 				"text",

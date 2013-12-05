@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ============== CSS ===================== -->
+    <title>Mpg vs. Gallons per 100 miles</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<!-- ============== BODY =================== -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ["input/TeX","output/HTML-CSS"],
+    extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    }
+    });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<body>
+
+  <h3>Gallons per 100 Miles</h3>
+
+  The problem is that mpg is a fraction with miles in the numerator and gallons in the denominator. It's convenient for questions with answers expressed in miles, such as: "If my car has 5 gallons left in the tank, and it gets 30 miles per gallon, how many miles can I go without stopping for gas?"
+
+  \[  
+    \frac{30 \, mi.}{1 \, gal.} * 3 \, gal. = 150 \, mi.
+  \] 
+
+  More often, however, you want answers expressed in gallons. Gallons are what matter to your budget and the environment (100 gallons <a href="http://www.eia.gov/tools/faqs/faq.cfm?id=307&t=11">emits one ton</a> of CO2). Therefore, it makes sense to put gallons in the numerator. A direct way would be to flip mpg and use <b>gallons per mile</b>:
+
+  \[  
+    \frac{1}{25 \, mi./gal.} = \frac{.04 \, gal. }{1\,mi.} 
+  \]   
+
+  But you'd have say, "point zero..." a bunch of times. A better way is to use gallons per 100 miles (gphm):
+
+  \[  
+    \frac{.04 \, gal}{1 mi.} * \frac{100 \,mi.}{100\,mi.} = \frac{4 \, gal. }{100 \,mi.} 
+  \] 
+
+  Litres per 100 km is standard in Europe, because when you put gallons in the numerator, comparing fuel usage is easy:
+
+  LINE CHART WITH GALLONS PER MILE ON THE X AXIS
+
+  <h3>Policy and Environmental Implications</h3>
+
+  Does all this mean it's alright to buy a new SUV just <i>slightly</i> more efficient than your old SUV? Just the opposite. If you're upgrading from 14 to 18 mpg, you're still in the domain where each mpg saves lots of gas, and you can cut your usage 28% by reaching for a 25 mpg sedan instead. That's why Larrick and Soll argue, "removing the most inefficient vehicles is where policy and popular opinion should be focused." In other words, it's more important to nudge drivers from SUV's to normal cars than from normal cars to hybrids.<br>
+
+  Fortunately, the government has already taken steps to steer the conversation. In the 2009 best-seller <i>Nudge</i>, U. Chicago economists Cass Sunstein and Richard Thaler discussed "The MPG Illusion" at length, and when President Obama appointed Sunstein to run the Office of Information and Regulatory Affairs, Sunstein worked to include "gallons per 100 miles" on vehicle showroom stickers that came out this year. 
+
+  <br>
+  <a href="http://www.fueleconomy.gov/feg/label/learn-more-gasoline-label.shtml"><img src="styles/gaslabel.jpg" alt="" width="500px"></a>
+  <br>
+
+  As Nobel Laureate <a href="http://books.google.com/books?id=ZuKTvERuPG8C&lpg=PP1&dq=thinking%2C%20fast%20and%20slow&pg=PA373#v=onepage&q=gallons&f=false">Daniel Kahneman noted</a>, "The five-year interval between the publication of 'The MPG Illusion' and the implementation of a partial correction is probably a speed record for a significant application of psychological science to public policy" (p. 373).<br>
+  
+  </body>
+
+<!-- ============== LIBRARIES =================== -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+</html>
