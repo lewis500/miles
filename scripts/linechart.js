@@ -109,7 +109,7 @@ svg.append("g")
   .attr("x", width - 20)
   .attr("dy", "2.5em")
   .style("text-anchor", "end")
-  .text("mpg")
+  .text("MPG")
   .style("font-size","14px");
 
 svg.append("g")
@@ -159,7 +159,7 @@ svg.append("g")
   .append("xhtml:div")
     .style("width", 300 + "px")
     // .attr("height", 200)
-    .html("<div>Drag the slider to change the mpg of your <span id='current'>current</span> vehicle. Notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets 10 more mpg.</div>");
+    .html("<div>Drag the slider to change the MPG of your <span id='current'>current</span> vehicle. Notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets 10 more MPG.</div>");
 
 
 var chart = {};
@@ -172,7 +172,7 @@ circle.on("mouseover", function(d){
      .duration(100)      
      .style("opacity", .9);   
 
- div .html("mpg:  "   + d3.round(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
+ div .html("MPG:  "   + d3.round(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
      .style("left", (d3.event.pageX + 10) + "px")     
      .style("top", (d3.event.pageY - 65) + "px");
 
@@ -318,7 +318,7 @@ xTextGA.append("rect")
   })
 
 var xTextGAText = xTextGA.append("text")
-  .text(d3.round(a) + "mpg")
+  .text(d3.round(a) + "MPG")
   .attr({
     x: -12.5,
     y: -12.5
@@ -339,7 +339,7 @@ xTextGB.append("rect")
   });
 
 var xTextGBText = xTextGB.append("text")
-  .text(d3.round(b)  + " mpg")
+  .text(d3.round(b)  + " MPG")
   .attr({
     x: 12.5,
     y: -12.5
@@ -384,7 +384,7 @@ xDiffText.append("rect")
 
 xDiffText
   .append("text")
-    .text("10 mpg")
+    .text("10 MPG")
     .attr("dx","-20px")
     .attr("dy","-15px");
 
@@ -503,8 +503,8 @@ function slide(event, a){
   t.text( format(c) - format(d) + " gal saved" );
   yTextGAText.text(format(c) + " gal");
   yTextGBText.text(format(d) + " gal");
-  xTextGAText.text(d3.round(a,0) + " mpg");
-  xTextGBText.text(d3.round(b,0) + " mpg");
+  xTextGAText.text(d3.round(a,0) + " MPG");
+  xTextGBText.text(d3.round(b,0) + " MPG");
 
   yTextGA.attr("transform","translate(" + 0 + "," + ya + ")");
   yTextGB.attr("transform","translate(" + 0 + "," + yb + ")");

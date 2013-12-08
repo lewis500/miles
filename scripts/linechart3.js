@@ -12,7 +12,7 @@ var format = d3.format(".3r");
 var formatB = d3.format(".2r");
 
 
-var margin = {top: 47.5, right: 80, bottom: 70, left: 60},
+var margin = {top: 47.5, right: 70, bottom: 70, left: 60},
     width = 620 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -108,7 +108,7 @@ svg.append("g")
   .attr("x", width - 20)
   .attr("dy", "2.5em")
   .style("text-anchor", "end")
-  .text("gphm")
+  .text("GPHM")
   .style("font-size","14px");
 
 svg.append("g")
@@ -158,7 +158,7 @@ svg.append("g")
   .append("xhtml:div")
     .style("width", 300 + "px")
     // .attr("height", 200)
-    .html("<div>This time, notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets <b>1</b> less gphm (gallons per hundred miles) than your <span id='current'>current</span> vehicle.</div>");
+    .html("<div>This time, notice how many gallons you save with a <span id='replacement'>new</span> vehicle that gets <b>1</b> less GPHM (gallons per hundred miles) than your <span id='current'>current</span> vehicle.</div>");
 
 circle.on("mouseover", function(d){
 
@@ -168,7 +168,7 @@ circle.on("mouseover", function(d){
      .duration(100)      
      .style("opacity", .9);   
 
- div .html("gphm:  "   + formatB(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
+ div .html("GPHM:  "   + formatB(d.x)  + "<br/>" + "gal/year: " + format(d.y))  
      .style("left", (d3.event.pageX + 10) + "px")     
      .style("top", (d3.event.pageY - 65) + "px");
 
@@ -313,7 +313,7 @@ xTextGA.append("rect")
   })
 
 var xTextGAText = xTextGA.append("text")
-  .text(formatB(b) + " gphm")
+  .text(formatB(b) + " GPHM")
   .attr({
     x: -12.5,
     y: -12.5
@@ -329,12 +329,12 @@ xTextGB.append("rect")
     x: 7.5,
     y: -30,
     rx: 3,
-    width: 70,
+    width: 72.5,
     height: 25,
   });
 
 var xTextGBText = xTextGB.append("text")
-  .text(formatB(a)  + " gphm")
+  .text(formatB(a)  + " GPHM")
   .attr({
     x: 12.5,
     y: -12.5
@@ -349,7 +349,7 @@ var yDiffText = diffGroup.append("g")
 
 yDiffText.append("rect")
   .attr({
-    width: 102.5,
+    width: 105,
     height: 25,
     y: -12.5,
     x: 20,
@@ -378,7 +378,7 @@ xDiffText.append("rect")
   })
 
 var xt = xDiffText.append("text")
-    .text(d3.round(b-a) + " gphm")
+    .text(d3.round(b-a) + " GPHM")
     .attr("dx","-27.5px")
     .attr("dy","-15px");
 
@@ -495,8 +495,8 @@ var b = a -1,
 
   yTextGAText.text(format(c) + " gal");
   yTextGBText.text(format(d) + " gal");
-  xTextGAText.text(formatB(b) + " gphm");
-  xTextGBText.text(formatB(a) + " gphm");
+  xTextGAText.text(formatB(b) + " GPHM");
+  xTextGBText.text(formatB(a) + " GPHM");
 
   yTextGA.attr("transform","translate(" + 0 + "," + ya + ")");
   yTextGB.attr("transform","translate(" + 0 + "," + yb + ")");
@@ -504,7 +504,7 @@ var b = a -1,
   xTextGB.attr("transform","translate(" + xa + "," + y(0) + ")");
 
   t.text(format(c) - format(d) + " gal saved" );
-  xt.text(d3.round(b-a) + " gphm")
+  xt.text(d3.round(b-a) + " GPHM")
 
   canCurrent.update(c);
   canNew.update(d);

@@ -95,22 +95,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "styles/style.css",
-			"settings":
-			{
-				"buffer_size": 1461,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/linechart.js",
-			"settings":
-			{
-				"buffer_size": 10613,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -203,17 +187,25 @@
 	},
 	"file_history":
 	[
+		"/home/lewis/Documents/github/miles/linechart.html",
+		"/home/lewis/Documents/github/miles/scripts/linechart3.js",
+		"/home/lewis/Documents/github/miles/scripts/linechart2.js",
+		"/home/lewis/Documents/github/miles/linechart2.html",
+		"/home/lewis/Documents/github/miles/linechart3.html",
+		"/home/lewis/Documents/github/miles/linechart1.html",
 		"/home/lewis/Documents/github/miles/scripts/linechart.js",
+		"/home/lewis/Documents/github/miles/scripts/congestionPricing.txt",
+		"/home/lewis/Documents/github/miles/scripts/barchart.js",
+		"/home/lewis/Documents/github/miles/barchart.html",
+		"/home/lewis/Documents/github/miles/text.txt",
+		"/home/lewis/Documents/github/miles/text.html",
+		"/home/lewis/Documents/github/miles/text3.html",
+		"/home/lewis/Documents/github/miles/text2.html",
+		"/home/lewis/Documents/github/miles/styles/style.css",
 		"/home/lewis/Documents/github/miles/todo.txt",
 		"/home/lewis/Documents/github/miles/styles/gas-overlay.svg",
-		"/home/lewis/Documents/github/miles/linechart.html",
 		"/home/lewis/Documents/github/miles/styles/gas.svg",
 		"/home/lewis/Documents/github/quant-econ/programs/web_graph_data.txt",
-		"/home/lewis/Documents/github/miles/text.txt",
-		"/home/lewis/Documents/github/miles/scripts/linechart2.js",
-		"/home/lewis/Documents/github/miles/styles/style.css",
-		"/home/lewis/Documents/github/miles/barchart.html",
-		"/home/lewis/Documents/github/miles/scripts/barchart.js",
 		"/home/lewis/Documents/github/miles/index.html",
 		"/home/lewis/Documents/github/miles/scripts/dimple.js",
 		"/home/lewis/Documents/github/miles/scripts/chart.js",
@@ -322,15 +314,7 @@
 		"/home/lewis/Documents/github/parking_data/scripts/node_modules/d3/node_modules/jsdom/node_modules/cssstyle/lib/properties/pageBreakInside.js",
 		"/home/lewis/Documents/github/bart/todo.txt",
 		"/home/lewis/Documents/github/bart/data/bart_stations.csv",
-		"/home/lewis/Documents/github/bart/data/bart_stations.json",
-		"/home/lewis/Documents/github/bart/data/bart_station_key.csv",
-		"/home/lewis/Documents/github/bart/data/ridership.json",
-		"/home/lewis/Documents/github/bart/data/ridership.csv",
-		"/home/lewis/Documents/github/bart/data/bart.xml",
-		"/home/lewis/Documents/github/bart/bayareaTOPO.json",
-		"/home/lewis/Documents/github/sfpark/scripts/parseit.js",
-		"/home/lewis/Documents/github/sfpark/data/locs.json",
-		"/home/lewis/Documents/github/sfpark/scripts/lewis_parser_csv2.js"
+		"/home/lewis/Documents/github/bart/data/bart_stations.json"
 	],
 	"find":
 	{
@@ -348,6 +332,52 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gphm",
+			"gpm",
+			"mpg",
+			"dx",
+			"400",
+			"375",
+			"250",
+			"gascan",
+			"var xt",
+			"xt.te",
+			"round",
+			"d3.round",
+			"-3",
+			"xt =",
+			"xt",
+			"gphm",
+			"gascan",
+			"tooltip",
+			"slider",
+			"+ 1",
+			"mpg",
+			"slider",
+			"\"width\"",
+			"margin",
+			"width:",
+			"width\"",
+			"slider",
+			"* b",
+			"*b",
+			"If you",
+			"slide",
+			".5",
+			"t =",
+			"canA",
+			"gascanA",
+			"percentOrabs",
+			"gascan",
+			"canA",
+			".update",
+			"gascan",
+			"format",
+			"slider",
+			"10",
+			"\"10\"",
+			"xt =",
+			"slider",
 			"gallons",
 			"/year",
 			"gal/year",
@@ -429,60 +459,17 @@
 			"cost",
 			"description",
 			"expense",
-			"tooltip",
-			"event",
-			"70",
-			"val",
-			"expense",
-			"class",
-			"z",
-			"weighting",
-			"total cost",
-			"figure",
-			"load-pri",
-			"obtain",
-			"period",
-			"begin",
-			"min",
-			"r(u)",
-			" }",
-			"min",
-			"for",
-			"\\text",
-			"pricing",
-			"\\bar{l}",
-			"horizonta",
-			"driver",
-			"with",
-			"gamma",
-			"\\bar{q}",
-			"q_j",
-			"q_i",
-			"gamma",
-			"400",
-			"agentArray",
-			"agArray",
-			"300",
-			"and",
-			"desired ",
-			"cumLess",
-			"tollOn",
-			"evalcost",
-			"tollHim",
-			"tollhim",
-			"math.random",
-			"prices",
-			"this.choose",
-			"tollhim",
-			"tollOn",
-			"tollon"
+			"tooltip"
 		],
 		"highlight": true,
 		"in_selection": false,
-		"preserve_case": true,
+		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"GPHM",
+			"MPG",
+			"gphm",
 			"new",
 			"mpg",
 			"m.p.g.",
@@ -561,76 +548,14 @@
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "styles/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1461,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1195,
-								1195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 801.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "scripts/linechart.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10613,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10569,
-								10569
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7735.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -682,15 +607,63 @@
 		"selected_items":
 		[
 			[
+				"linechart3.js",
+				"scripts/linechart3.js"
+			],
+			[
+				"linechart3",
+				"linechart3.html"
+			],
+			[
+				"linechart",
+				"linechart2.html"
+			],
+			[
+				"linechart2",
+				"scripts/linechart2.js"
+			],
+			[
+				"chart.js",
+				"scripts/linechart.js"
+			],
+			[
+				"linechart2.",
+				"scripts/linechart2.js"
+			],
+			[
+				"linechart.js",
+				"scripts/linechart.js"
+			],
+			[
+				"linechart2.js",
+				"scripts/linechart2.js"
+			],
+			[
+				"text.html",
+				"text.html"
+			],
+			[
+				"linechar",
+				"scripts/linechart.js"
+			],
+			[
+				"text.htl",
+				"text.html"
+			],
+			[
+				"text",
+				"text.txt"
+			],
+			[
+				"linechart.html",
+				"linechart.html"
+			],
+			[
 				"todo",
 				"todo.txt"
 			],
 			[
 				"linecha",
-				"scripts/linechart.js"
-			],
-			[
-				"linechart",
 				"scripts/linechart.js"
 			],
 			[
@@ -700,18 +673,6 @@
 			[
 				"text.txt",
 				"text.txt"
-			],
-			[
-				"linechart.js",
-				"scripts/linechart.js"
-			],
-			[
-				"text",
-				"text.txt"
-			],
-			[
-				"linechar",
-				"scripts/linechart.js"
 			],
 			[
 				"style",
@@ -732,10 +693,6 @@
 			[
 				"style.",
 				"styles/style.css"
-			],
-			[
-				"chart.js",
-				"scripts/chart.js"
 			],
 			[
 				"shorter",
